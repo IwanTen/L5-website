@@ -1,12 +1,12 @@
 # strokeJoin()
 
-**Note: strokeJoin in L5 has different parameter options than Processing and p5.js.**
-
 Sets the style of the joints that connect line segments.
 
 Joints are either mitered (`MITER`), beveled (`BEVEL`), or none (`NONE`). The default joint is `MITER`.
 
 The argument passed to `strokeJoin()` must be written in ALL CAPS because the constants `MITER`, `BEVEL`, and `NONE` are defined this way. Lua is a case-sensitive language.
+
+**Note: strokeJoin in L5 has different parameter options than Processing and p5.js.**
 
 ## Examples
 

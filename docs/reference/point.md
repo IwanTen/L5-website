@@ -8,12 +8,38 @@ Set the point location with its x- and y-coordinates, as in point(10, 20).
 
 ## Example
 
-![point example](assets/point.webp)
+![point 1 example](assets/point1.webp)
 
 ```lua
 function setup() 
   size(100, 100)
+  windowTitle("point example")
+  background(200)
 
+  -- Top-left.
+  point(30, 20)
+
+  -- Top-right.
+  point(85, 20)
+
+  -- Bottom-right.
+  point(85, 75)
+
+  -- Bottom-left.
+  point(30, 75)
+
+  describe(
+    'Four small, black points drawn on a gray canvas. The points form the corners of a square.'
+  )
+end
+```
+
+![point 2 example](assets/point2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+  windowTitle("point example")
   background(200)
 
   -- Top-left.
@@ -52,3 +78,5 @@ point(x, y)
 ## Related
 
 * [stroke()](stroke.md)
+* [strokeWeigh()](strokeWeight.md)
+* [line()](line.md)

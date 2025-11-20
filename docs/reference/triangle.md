@@ -4,14 +4,17 @@ A triangle is a plane created by connecting three points. The first two argument
 
 ## Examples
 
-![triangle example](assets/triangle.webp)
+![triangle 1 example](assets/triangle1.webp)
 
 ```lua
 function setup() 
-  size(400, 400)
-  triangle(120, 300, 232, 80, 344, 300)
-  
-  describe('A white triangle outlined in gray.')
+  size(100, 100)
+  windowTitle("triangle example")
+  background(200)
+
+  triangle(30, 75, 58, 20, 86, 75)
+
+  describe('A white triangle with a black outline on a gray canvas.')
 end
 ```
 
@@ -33,3 +36,7 @@ triangle(x1, y1, x2, y2, x3, y3)
 | y3        | Number: y-coordinate of the third point.           |
 
 ## Related
+
+* [arc()](arc.md)
+* [quad()](quad.md)
+* [line()](line.md)

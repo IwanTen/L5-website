@@ -1,21 +1,134 @@
 # bezier()
 
-Draws a Bézier curve on the screen. These curves are defined by a series of anchor and control points. The first two parameters specify the first anchor point and the last two parameters specify the other anchor point. The middle parameters specify the control points which define the shape of the curve. The curves were developed by French engineer Pierre Bezier. 
+Draws a Bézier curve.
+
+Bézier curves can form shapes and curves that slope gently. They're defined by two anchor points and two control points. Bézier curves provide more control than the spline curves created with the curve() function.
+
+The first two parameters, x1 and y1, set the first anchor point. The first anchor point is where the curve starts.
+
+The next four parameters, x2, y2, x3, and y3, set the two control points. The control points "pull" the curve towards them.
+
+The seventh and eighth parameters, x4 and y4, set the last anchor point. The last anchor point is where the curve ends.
 
 ## Examples
 
-![bezier example](assets/bezier.webp)
+![bezier 1 example](assets/bezier1.webp)
 
 ```lua
 function setup() 
-  noFill()
-  stroke(255, 102, 0)
-  line(340, 80, 40, 40)
-  line(360, 360, 60, 320)
-  stroke(0, 0, 0)
-  bezier(340, 80, 40, 40, 360, 360, 60, 320)
+  size(100, 100)
+  windowTitle('bezier example')
+  background(200)
 
-  describe('A bezier curve with red lines extending away from either end')
+  -- Draw the anchor points in black.
+  stroke(0)
+  strokeWeight(5)
+  point(85, 20)
+  point(15, 80)
+
+  -- Draw the control points in red.
+  stroke(255, 0, 0)
+  point(10, 10)
+  point(90, 90)
+
+  -- Draw a black bezier curve.
+  noFill()
+  stroke(0)
+  strokeWeight(1)
+  bezier(85, 20, 10, 10, 90, 90, 15, 80)
+
+  -- Draw red lines from the anchor points to the control points.
+  stroke(255, 0, 0)
+  line(85, 20, 10, 10)
+  line(15, 80, 90, 90)
+
+  describe(
+    'A gray square with three curves. A black s-curve has two straight, red lines that extend from its ends. The endpoints of all the curves are marked with dots.'
+  )
+end
+```
+
+![bezier 2 example](assets/bezier2.webp)
+
+```lua
+-- Click the mouse near the red dot in the top-left corner
+-- and drag to change the curve's shape.
+
+local x2 = 10
+local y2 = 10
+local isChanging = false
+
+function setup() 
+  size(100, 100)
+  windowTitle('bezier example')
+  describe(
+    'A gray square with three curves. A black s-curve has two straight, red lines that extend from its ends. The endpoints of all the curves are marked with dots.'
+  )
+end
+
+function draw() 
+  background(200)
+
+  -- Draw the anchor points in black.
+  stroke(0)
+  strokeWeight(5)
+  point(85, 20)
+  point(15, 80)
+
+  -- Draw the control points in red.
+  stroke(255, 0, 0)
+  point(x2, y2)
+  point(90, 90)
+
+  -- Draw a black bezier curve.
+  noFill()
+  stroke(0)
+  strokeWeight(1)
+  bezier(85, 20, x2, y2, 90, 90, 15, 80)
+
+  -- Draw red lines from the anchor points to the control points.
+  stroke(255, 0, 0)
+  line(85, 20, x2, y2)
+  line(15, 80, 90, 90)
+end
+
+-- Start changing the first control point if the user clicks near it.
+function mousePressed() 
+  if dist(mouseX, mouseY, x2, y2) < 20  then
+    isChanging = true
+  end
+end
+
+-- Stop changing the first control point when the user releases the mouse.
+function mouseReleased() 
+  isChanging = false;
+end
+
+-- Update the first control point while the user drags the mouse.
+function mouseDragged() 
+  if isChanging == true then
+    x2 = mouseX
+    y2 = mouseY
+  end
+end
+```
+
+![bezier 3 example](assets/bezier3.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+  windowTitle('bezier example')
+  background('skyblue')
+
+  -- Draw the red balloon.
+  fill('red')
+  bezier(50, 60, 5, 15, 95, 15, 50, 60)
+
+  -- Draw the balloon string.
+  line(50, 60, 50, 80)
+
+  describe('A red balloon in a blue sky.')
 end
 ```
 
@@ -40,3 +153,5 @@ bezier(x1, y1, x2, y2, x3, y3, x4, y4)
 
 ## Related
 
+* [curve()](curve.md)
+* [vertex()](vertex.md)

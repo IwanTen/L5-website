@@ -8,7 +8,7 @@ To write code for L5 you need to install Love2d and the single L5.lua library fi
 
 1. Download and install [Love2d](https://www.love2d.org/) with the free and simple installer
 2. Download L5.lua
-3. Create a new main.lua file and write your L5 code in there. Be sure to include `require ("L5")` in the top of your program. Save your program in the same folder as L5.lua.
+3. Make a new folder for your project. Inside it create a `main.lua` file to write your code in. Be sure to include `require ("L5")` in the top of your program. Add a copy of L5.lua to your folder. 
 
 ## Running your program
 
@@ -77,9 +77,9 @@ and try it again.
 
 ### Windows
 
-ZeroBrane Studio, Sublime Text, Notepad++, and SciTE allow you to launch your program from within their code editors.
+ZeroBrane Studio, Sublime Text, VS Code, Notepad++, and SciTE allow you to launch your program from within their code editors, though may take some special configuration.
 
-Otherwise, the easiest way to run your program is to drag the folder onto either love.exe or a shortcut to love.exe. Remember to drag the folder containing main.lua, and not main.lua itself.
+Otherwise, the easiest way to run your program is to drag the folder onto either love.exe or a shortcut to love.exe. Remember to drag the folder containing `main.lua`, and not `main.lua` itself.
 
 You can also launch the game from the command line:
 
@@ -97,4 +97,4 @@ On Windows, there is a special command-line option which will attach a console t
 
 ---
 
-Installation instructions adapted from [Love2d wiki: Getting Started](https://www.love2d.org/wiki/Getting_Started), GNU Free Documentation License 1.3.
+*Installation instructions adapted from [Love2d wiki: Getting Started](https://www.love2d.org/wiki/Getting_Started), GNU Free Documentation License 1.3.*

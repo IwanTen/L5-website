@@ -4,14 +4,16 @@ Draws a circle to the screen. By default, the first two parameters set the locat
 
 ## Examples
 
-![circle example](assets/circle.webp)
+![circle 1 example](assets/circle1.webp)
 
 ```lua
 function setup() 
-  size(400, 400);
-  circle(224, 184, 220);
+  size(100, 100)
+  windowTitle("circle example")
+  background(200)
+  circle(50, 50, 25)
 
-  describe('A white circle on a gray canvas.')
+  describe('A white circle with black outline in the middle of a gray canvas.')
 end
 ```
 

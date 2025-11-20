@@ -6,7 +6,7 @@ A line's default width is one pixel. The version of `line()` with four parameter
 
 ## Examples
 
-![line example](assets/line.webp)
+![line 1 example](assets/line1.webp)
 
 ```lua
 function setup() 
@@ -17,6 +17,45 @@ function setup()
   line(30, 20, 85, 75)
 
   describe('A black line on a gray canvas running from top-center to bottom-right.')
+end
+```
+
+![line 2 example](assets/line2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+  windowTitle("line example")
+  background(200)
+  stroke('magenta')
+  strokeWeight(5)
+
+  line(30, 20, 85, 75)
+
+  describe('A thick, magenta line on a gray canvas running from top-center to bottom-right.')
+end
+```
+
+![line 3 example](assets/line3.webp)  
+
+```lua
+function setup() 
+  size(100, 100)
+  windowTitle("line example")
+  background(200)
+
+  -- Top
+  line(30, 20, 85, 20)
+
+  -- Right
+  stroke(126)
+  line(85, 20, 85, 75)
+
+  -- Bottom
+  stroke(255)
+  line(85, 75, 30, 75)
+
+  describe('Three lines drawn in grayscale on a gray window. They form the top, right, and bottom sides of a square.')
 end
 ```
 
@@ -37,7 +76,7 @@ line(x1, y1, x2, y2)
 
 ## Related
 
-* [strokeWeight()](strokeweight.md)
+* [strokeWeight()](strokeWeight.md)
 * [strokeJoin()](strokejoin.md)
 * [strokeCap()](strokecap.md)
-* ~~beginShape()~~
+* [beginShape()](beginShape.md)

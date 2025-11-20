@@ -4,14 +4,59 @@ A quad is a quadrilateral, a four sided polygon. It is similar to a rectangle, b
 
 ## Examples
 
-![quad example](assets/quad.webp)
+![quad 1 example](assets/quad1.webp)
 
 ```lua
 function setup() 
-  size(400, 400)
-  quad(152, 124, 344, 80, 276, 252, 120, 304)
-  
-  describe('A white quadrilateral outlined in black.')
+  size(100, 100)
+  windowTitle("line example")
+  background(200)
+
+  quad(20, 20, 80, 20, 80, 80, 20, 80)
+
+  describe('A white square with a black outline drawn on a gray canvas.')
+end
+```
+
+![quad 2 example](assets/quad2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+  windowTitle("quad example")
+  background(200)
+
+  quad(20, 30, 80, 30, 80, 70, 20, 70)
+
+  describe('A white rectangle with a black outline drawn on a gray canvas.')
+end
+```
+
+![quad 3 example](assets/quad3.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+  windowTitle("quad example")
+  background(200)
+
+  quad(50, 62, 86, 50, 50, 38, 14, 50)
+
+  describe('A white rhombus with a black outline drawn on a gray canvas.')
+end
+```
+
+![quad 4 example](assets/quad4.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+  windowTitle("quad example")
+  background(200)
+
+  quad(20, 50, 80, 30, 80, 70, 20, 70)
+
+  describe('A white trapezoid with a black outline drawn on a gray canvas.')
 end
 ```
 
@@ -36,3 +81,7 @@ quad(x1, y1, x2, y2, x3, y3, x4, y4)
 
 ## Related
 
+* [arc()](arc.md)
+* [circle()](circle.md)
+* [ellipse()](ellipse.md)
+* [line()](line.md)

@@ -6,7 +6,7 @@ This website uses the MIT license, with the exception of the Reference and Examp
 
 Love2d installation instructions have been adapted from the [Love2d wiki: Getting Started](https://www.love2d.org/wiki/Getting_Started), GNU Free Documentation License 1.3.
 
-L5 is currently created and led by [Lee Tusman](https://leetusman.com/). Contributors are welcomed.
+L5 is currently initiated and currently led by [Lee Tusman](https://leetusman.com/). Contributors are welcomed.
 
 [Mercury Blob](https://www.dafont.com/mercury-blob.font) by Matt Perkins. This website is built using [Material for Mkdocs](https://mrkeo.github.io/).
 

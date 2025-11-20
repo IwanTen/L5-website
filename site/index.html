@@ -8,23 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://l5.github.io/">
+        <link rel="canonical" href="https://l5lua.org/">
       
       
       
-        <link rel="next" href="old-index/">
+        <link rel="next" href="download/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="assets/L5-logo-blob.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>L5</title>
+        <title>L5: A Processing Library in Lua</title>
       
     
     
       <link rel="stylesheet" href="assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -38,10 +41,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"Fira Code"}</style>
       
     
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -53,7 +58,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="gold" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -62,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#welcome-to-l5" class="md-skip">
           Skip to content
         </a>
       
@@ -78,10 +88,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="L5" class="md-header__button md-logo" aria-label="L5" data-md-component="logo">
+    <a href="." title="L5: A Processing Library in Lua" class="md-header__button md-logo" aria-label="L5: A Processing Library in Lua" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/L5-logo-blob.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -92,21 +101,21 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            L5
+            L5: A Processing Library in Lua
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to MkDocs
+              Welcome to L5
             
           </span>
         </div>
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -176,13 +185,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="L5" class="md-nav__button md-logo" aria-label="L5" data-md-component="logo">
+    <a href="." title="L5: A Processing Library in Lua" class="md-nav__button md-logo" aria-label="L5: A Processing Library in Lua" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/L5-logo-blob.png" alt="logo">
 
     </a>
-    L5
+    L5: A Processing Library in Lua
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -208,7 +216,7 @@
   
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome to L5
     
   </span>
   
@@ -221,7 +229,7 @@
   
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Welcome to L5
     
   </span>
   
@@ -244,18 +252,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#example-sketch" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Example sketch
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Lua?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features-of-l5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features of L5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community and Support
     </span>
   </a>
   
@@ -276,12 +329,532 @@
   
   
     <li class="md-nav__item">
-      <a href="old-index/" class="md-nav__link">
+      <a href="download/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="L5-for-processingp5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    L5 for Processing-p5.js programmers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#shape" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shape
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#color" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Color
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#typography" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#image" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#transform" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#environment" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#rendering" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#math" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#io" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#events" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#data" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#structure" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#constants" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Constants
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/#foundation" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bug-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bug Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="how/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    For developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="copyleft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Copyleft
     
   </span>
   
@@ -318,18 +891,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#example-sketch" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Example sketch
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Lua?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features-of-l5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features of L5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community and Support
     </span>
   </a>
   
@@ -351,21 +969,78 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<h1 id="welcome-to-l5">Welcome to L5</h1>
+<p><img alt="L5 logo" src="assets/L5-logo-blob.png" /></p>
+<p>L5 is a fun, fast, cross-platform, and lightweight implementation of the Processing API in Lua. It is a free and open source coding library to make interactive artwork on the computer, aimed at artists, designers, and anyone that wants a flexible way to prototype art, games, toys, and other software experiments in code.</p>
+<p>L5 is designed to work cross-platform, including on desktop, phone, and tablet. Beyond running fast on modern machines, L5 is optimized for older and lower-powered devices, minimizing resource usage to keep creative coding accessible to everyone. This helps with our goal of building resilient, long-lasting software projects. L5 is built in Lua, a robust but lightweight, long-running, lightning-fast, extensible language. </p>
+<h2 id="example-sketch">Example sketch</h2>
+<p><img alt="L5 hello drawing program running" src="assets/L5-hi.gif" /></p>
+<pre><code class="language-lua">require(&quot;L5&quot;)
+function setup()
+    size(400, 400)
+    windowTitle('Hello L5')
+    background('white')
+    noStroke()
+    describe('A basic drawing program in L5. A random fill color each mouse press.')
+end
+
+function mouseDragged()
+    -- Draw a circle that follows the mouse when held down
+    circle(mouseX, mouseY, 20)
+end
+
+function mousePressed()
+  -- Pick a random color on mouse press
+  fill(random(255),random(255),random(255))
+end
 </code></pre>
+<h2 id="overview">Overview</h2>
+<p>L5 brings the familiar Processing creative coding environment to Lua, offering some of the best aspects of both Processing and p5.js with some twists of its own. But you don't need to know Processing already to get started with L5. L5 is built on top of the Love2D framework, and offers near-instant loading times and excellent performance while maintaining the intuitive API that makes <a href="https://processing.org/">Processing</a> accessible to artists and designers. <em>L5 is not an official implementation of Processing or the Processing Foundation. It is a community-created project.</em></p>
+<blockquote>
+<p>Processing is not a single programming language, but an arts-centric system for learning, teaching, and making visual form with code. <em>-<a href="https://py.processing.org/reference/">Processing.py reference</a></em></p>
+</blockquote>
+<h2 id="why-lua">Why Lua?</h2>
+<p>Lua is a versatile programming language known for its simplicity and efficiency. It has a straightforward easy-to-learn syntax, accessible for beginners, and it's efficient for experienced programmers as well.</p>
+<p>The language is lightweight and fast. Despite its small size, there are lots of libraries and it is used in everything from Minecraft's ComputerCraft, to the handheld game device Playdate and the Pico-8 fantasy console, to complex game engines and configuration languages, as well as embedded in many hardware devices. Developing in Lua means your projects can work cross-platform relatively seamlessly, enhancing accessibility and reach.</p>
+<p>Where Java undergoes regular major updates and JavaScript is a fast-evolving and changing language, Lua is a very slowly and intentionally developed language. It was originally created in Brazil in 1993, and still governed by a goal of including strong backward compatibility during its infrequent but focused updates. For this reason, Lua programs have a high chance of running for years, ideally with little or no changes.</p>
+<h2 id="key-features-of-l5">Key Features of L5</h2>
+<ul>
+<li><strong>Lightning fast</strong>: Scripts, images, and audio load near-instantly</li>
+<li><strong>Easy syntax</strong>: Easy to learn and consistent syntax.</li>
+<li><strong>Minimal footprint</strong>: L5 (~6MB, from Love2D ~4.5MB + LuaJIT ~1.5MB) vs Processing (~500MB) vs p5.js (~1-4MB + browser ~250-355MB)</li>
+<li><strong>Lighter impact</strong>: Runs on older hardware and devices.</li>
+<li><strong>Cross-platform</strong>: Runs on Windows, macOS, Linux, iOS, Android, Raspberry Pi</li>
+<li><strong>Synchronous execution</strong>: Code runs in predictable order, no async complexity</li>
+<li><strong>Desktop-focused</strong>: Optimized for installations and standalone applications</li>
+<li><strong>Resiliency</strong>: Underlying Lua language and Love2d frameworks change much slower than equivalent languages like JavaScript and Java</li>
+</ul>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li><strong>1-indexed</strong>: Lua arrays start at 1, not 0 (use <code>#</code> to get array/string length)</li>
+<li><strong>2D only</strong>: Currently limited to 2D graphics (3D libraries possible but not built-in)</li>
+<li><strong>Tables everywhere</strong>: Lua uses tables for arrays, objects, and data structures</li>
+<li><strong>OOP patterns</strong>: Check Lua documentation for object-oriented programming approaches</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li><strong>Install Love2D</strong> from <a href="https://www.love2d.org/">love2d.org</a></li>
+<li><strong>Download L5</strong> (clone the repository or download the L5.lua file to your project directory)</li>
+<li><strong>Create or edit main.lua</strong> in the same directory as L5.lua</li>
+<li><strong>Require L5</strong> at the top of your main.lua file with <code>require ("L5")</code></li>
+<li><strong>Write</strong> your program code in main.lua</li>
+<li><strong>Run</strong> your program by dragging the directory holding your main.lua sketch onto Love2D icon or running <code>love .</code> in terminal from its root.</li>
+</ol>
+<h2 id="community-and-support">Community and Support</h2>
+<p>While L5 is a new project with growing documentation, it benefits from:</p>
+<ul>
+<li>The welcoming Processing community and their decade+ of resources</li>
+<li>Extensive Processing tutorials, books, and forums that translate well to L5</li>
+<li>The stable Lua and Love2D ecosystems</li>
+<li>Active development and community contributions</li>
+</ul>
+<p>Note: As L5 is new, documentation and examples are still growing compared to the mature Processing ecosystem.</p>
+<hr />
+<p><em>L5 aims to make creative coding accessible, fast, and fun while leveraging the power and simplicity of Lua and a commitment to making resilient, long-lasting tools.</em></p>
 
 
 
@@ -395,11 +1070,6 @@ docs/
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
@@ -414,7 +1084,7 @@ docs/
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.indexes"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.50899def.min.js"></script>

@@ -1,12 +1,12 @@
-## STRUCTURE
+**Note: As of November 2025 the reference is currently in-process. All pages that were automatically ported from p5.js to L5 and haven't yet been checked, fixed and updated have a bolded note at the top of their page. On those pages the code is likely incorrect, and the description or parameters might be wrong!**
 
 ## Shape
 
 ### 2D Primitives
 
 * [arc()](arc.md)
-* [ellipse()](ellipse.md)
 * [circle()](circle.md)
+* [ellipse()](ellipse.md)
 * [line()](line.md)
 * [point()](point.md)
 * [quad()](quad.md)
@@ -26,220 +26,254 @@
 ### Curves
 
 * [bezier()](bezier.md)
+* [curve()](curve.md)
 
-## UNFINISHED PAGES
+### Vertex
 
-* {} (curly braces - defines a table for arrays, classes, objects, dictionaries, data and more)
-* [] (access items from an ordered table aka "array")
-* -- (comment)
-* --[[ (multi-line comment) ]]--
-* = (assign global variable)
-* local (assign local variable)
-* ==
-* nil
-* true
-* false
-* setup()
-* draw()
-* for i=1,5 do end
-* loop
-* noLoop()
-* isLooping() -- equals true or false
-* exit() (quits/stops/exits the program)
-* redraw() (executes draw one time)
-* windowTitle() 
-* function (used to define a new user-defined function)
+* [beginShape()](beginShape.md)
+* [endShape()](endShape.md)
+* [vertex()](vertex.md)
 
-## Control
+## Color
 
-### Conditionals
+### Creating and Reading
 
-* break (finish a loop that contains it)
-* if
-* then
-* end
-* elseif
+* [alpha()](alpha.md)
+* [blue()](blue.md)
+* [brightness()](brightness.md)
+* [color()](color-object.md)
+* [green()](green.md)
+* [hue()](hue.md)
+* [lerpColor()](lerpColor.md)
+* [lightness()](lightness.md)
+* [red()](red.md)
 
-### Relational Operators
+### Setting
 
-* == (equality)
-* ~= (inequality)
+* [background()](background.md)
+* [clear()](clear.md)
+* [colorMode()](colorMode.md)
+* [fill()](fill.md)
+* [noFill()](noFill.md)
+* [noStroke()](noStroke.md)
+* [stroke()](stroke.md)
 
-### Iteration
+## Typography
 
-* for (runs a set number of times)
-* while do (runs while true, checks before executing)
-* repeat until (loops but checks condition at end. executes at least once)
+### Attributes
 
-### Logical Operators
+* [textAlign()](textAlign.md)
+* [textSize()](textSize.md)
+* [textWidth()](textWidth.md)
+* [textWrap()](textWrap.md)
 
-* and 
-* or 
-* not 
+### Loading and Displaying
+
+* [loadFont()](loadFont.md)
+* [text()](text.md)
+* [textFont()](textFont.md)
+
+## Image
+
+### Loading and Displaying
+
+* [image()](image.md)
+* [imageMode()](imageMode.md)
+* [loadImage()](loadImage.md)
+* [noTint()](noTint.md)
+* [tint()](tint.md)
+
+### Pixels
+
+* [blend()](blend.md)
+* [copy()](copy.md)
+* [filter()](filter.md)
+* [get()](get.md)
+* [loadPixels()](loadPixels.md)
+* [pixels](pixels.md)
+* [set()](set.md)
+* [updatePixels()](updatePixels.md)
+
+## Transform
+
+* [applyMatrix()](applyMatrix.md)
+* [resetMatrix()](resetMatrix.md)
+* [rotate()](rotate.md)
+* [scale()](scale.md)
+* [translate()](translate.md)
 
 ## Environment
-* size()
-* print()
-* deltaTime
-* describe() --implementing as text to console, takes string input, should be in setup
-* displayDensity()
-* displayHeight 
-* displayWidth 
-* focused --boolean var
-* frameCount
-* frameRate()
-* fullscreen() --returns true if in fullscreen, false otherwise. if passed true, turns on fullscreen, or turns off if passed false. equivalent to p5.js implementation
-* width (width of canvas in pixels)
-* height (height of canvas in pixels)
-* resizeWindow() (function that runs when window is resized)
+
+* [cursor()](cursor.md)
+* [deltaTime](deltaTime.md)
+* [describe()](describe.md)
+* [displayDensity()](displayDensity.md)
+* [displayHeight](displayHeight.md)
+* [displayWidth](displayWidth.md)
+* [focused](focused.md)
+* [frameCount](frameCount.md)
+* [frameRate()](frameRate.md)
+* [fullscreen()](fullscreen.md)
+* [noCursor()](noCursor.md)
+* [pixelDensity()](pixelDensity.md)
+* [print()](print.md)
+* [width](width.md)
+* [windowHeight](windowHeight.md)
+* [windowResized()](windowResized.md)
+* [windowWidth](windowWidth.md)
+
+## Rendering
+
+* <s>[blendMode()](#)</s>
+* [size()](size.md) - Creates a window of specified dimensions
+* [createGraphics()](createGraphics.md)
+* <s>[noCanvas()](#)</s>
+* [resizeCanvas()](resizeCanvas.md)
+
+## Math
+
+### Calculation
+
+* [abs()](abs.md) 
+* [ceil()](ceil.md) 
+* [constrain()](constrain.md)
+* [dist()](dist.md)
+* [exp()](exp.md)
+* [floor()](floor.md)
+* [fract()](fract.md)
+* [lerp()](lerp.md)
+* [log()](log.md)
+* [map()](map.md)
+* [max()](max.md)
+* [min()](min.md)
+* [norm()](norm.md)
+* [pow()](pow.md)
+* [round()](round.md)
+* [sq()](sq.md)
+* [sqrt()](sqrt.md)
+
+### Noise
+
+* [noise()](noise.md)
+* <s>[noiseSeed()](#)</s>
+
+### Random
+
+* [random()](random.md)
+* [randomGaussian()](randomGaussian.md)
+* [randomSeed()](randomSeed.md)
+
+### Trigonometry
+
+* [acos()](acos.md)
+* [angleMode()](angleMode.md)
+* [asin()](asin.md)
+* [atan()](atan.md)
+* [atan2()](atan2.md)
+* [cos()](cos.md)
+* [degrees()](degrees.md)
+* [radians()](radians.md)
+* [sin()](sin.md)
+* [tan()](tan.md)
 
 ## I/O
 
 ### Input
-* loadStrings() --takes filename as arg, returns table
-* loadTable() --takes 1 or 2 arguments: filename, optional "header" string if header in csv or tsv present. Detects suffix (csv, tsv or lua) and processes accordingly. Saves to a table.
+
+* <s>[loadJSON()](#)</s>
+* [loadStrings()](loadStrings.md)
+* [loadTable()](loadTable.md)
+* <s>[loadXML()](#)</s>
 
 ### Output
-* saveStrings() --takes table and output filename as arguments
-* saveTable() --takes table and filename as arguments, and optional format "csv","tsv" or "lua". Auto-selects output based on filename suffix if third argument empty.
+
+* [save()](save.md)
+* <s>[saveJSON()](#)</s>
+* [saveStrings()](saveStrings.md)
+* [saveTable()](saveTable.md)
 
 ### Time and Date
-* millis()
-* day()
-* month()
-* year()
+
+* [day()](day.md)
+* [hour()](hour.md)
+* [millis()](millis.md)
+* [minute()](minute.md)
+* [month()](month.md)
+* [second()](second.md)
+* [year()](year.md)
 
 ## Events
 
 ### Keyboard
 
-* key
-* keyIsDown() --not in Processing
-* keyIsPressed --boolean, called keyPressed in Processing
-* keyPressed()
-* keyReleased()
-* keyTyped()
+* [key](key.md)
+* <s>[keyCode](#)</s>
+* [keyIsDown()](keyIsDown.md)
+* [keyIsPressed()](keyIsPressed.md)
+* [keyPressed()](keyPressed.md)
+* [keyReleased()](keyReleased.md)
+* [keyTyped()](keyTyped.md)
 
 ### Mouse
 
-* mouseButton --A variable that returns which mouse button was last pressed: LEFT, RIGHT or CENTER
-* mouseClicked() --called once after a mouse button pressed and released
-* mouseDragged() -- called while mouse moves and a mouse button is pressed
-* mouseIsPressed --boolean, called mousePressed in Processing
-* mouseMoved() --called when mouse moved, no button pressed
-* mousePressed() --called once after mouse button pressed
-* mouseReleased() --called once when a mouse button released
-* mouseWheel() --runs once while wheel is moving if passed x,y then can return change of -1 or 1 for x (left or right), -1 or 1 for y (up or down)
-* mouseX --horizontal coordinate of mouse
-* mouseY --vertical coordinate of mouse
-* movedX --mouseX-pmouseX, not in Processing
-* movedY --mouseY-pmouseY, not in Processing
-* pmouseX --mouseX in previous frame
-* pmouseY --mouseY in previous frame
+* <s>[doubleClicked()](#)</s>
+* [mouseButton](mouseButton.md)
+* [mouseClicked()](mouseClicked.md)
+* [mouseDragged()](mouseDragged.md)
+* [mouseIsPressed](mouseIsPressed.md)
+* [mouseMoved()](mouseMoved.md)
+* [mousePressed()](mousePressed.md)
+* [mouseReleased()](mouseReleased.md)
+* [mouseWheel()](mouseWheel.md)
+* [mouseX](mouseX.md)
+* [mouseY](mouseY.md)
+* [movedX](movedX.md)
+* [movedY](movedY.md)
+* [pmouseX](pmouseX.md)
+* [pmouseY](pmouseY.md)
 
-### Touch -- Not under development. Could be added later if interest.
+## Data
 
-## SHAPE
+### Conversion
 
-### 2D Primitives
+* [boolean()](boolean.md)
+* [byte()](byte.md)
+* [char()](char.md)
+* [float()](float.md)
+* [hex()](hex.md)
+* [int()](int.md)
+* [str()](str.md)
+* [unchar()](unchar.md)
+* [unhex()](unhex.md)
 
-* arc()
-* circle()
-* ellipse()
-* line()
-* point()
-* rect()
-* square()
-* triangle()
+## Structure
 
-### Attributes
-
-* ellipseMode()
-* rectMode()
-* strokeCap() --default: ROUND, also SQUARE. no EXTEND.
-* strokeWeight()
-* noSmooth()
-* smooth()
-* strokeJoin() --MITER, BEVEL, NONE. No ROUND. MITER is default. Also affected by strokeCap (because of Love2d's internals)
-
-### Curves
-* curve()
-
-
-### Creating & Reading
-* alpha() (gets alpha aka 4th value of a color)
-* blue() (gets blue aka 3rd value of a color)
-* red() (gets red value of a color)
-* color() (creates a color object) --G, G,A R,G,B  R,G,B,A or html color name. affected by colormode.
-* green() (gets the green value of a color)
-* hue() - IN-PROCESS (gets the hue value of a color)
-
-### Setting
-* background() --G, G,A R,G,B  R,G,B,A or html color name. affected by colorMode.
-* clear()
-* HSB --mode, a constant
-* HSL --mode, a constant
-* colorMode() --default: RGB. alternately: HSB, HSL. optional second val sets max color values.
-* fill() - G, G,A R,G,B  R,G,B,A or html color name. affected by colorMode.
-* noFill()
-* noStroke()
-* stroke() --G, G,A R,G,B  R,G,B,A or html color name. affected by colorMode.
-
-### Transform
-* push() (saves previous drawing style settings)
-* pop() (restores previous drawing style settings)
-* translate()
-* rotate()
-* scale()
+* [draw()](draw.md)
+* [isLooping()](isLooping.md)
+* [loop()](loop.md)
+* [noLoop()](noLoop.md)
+* [pop()](pop.md)
+* [push()](push.md)
+* [redraw()](redraw.md)
+* [setup()](setup.md)
 
 ## Constants
-* HALF_PI (1.57079...)
-* PI (3.14159...)
-* QUARTER_PI (0.78539...)
-* TAU (6.28318...)
-* TWO_PI (6.28318...)
 
-### Math
-* random() --takes 1 or 2 arguments. if a table name is given, returns a random value from the table
-* randomSeed()
-* noise() --1, 2 or 3 dimensional Simplex noise generation
-* abs()
-* ceil()
-* floor()
-* round()
-* constrain()
-* map()
-* dist()
-* max()
-* min()
+* [DEGREES()](degrees.md)
+* [HALF_PI](half_pi.md)
+* [HSB](hsb.md)
+* [PI](pi.md)
+* [RADIANS()](radians.md)
+* [TAU](tau.md)
+* [TWO_PI](two_pi.md)
 
-### Trigonometry
-* angleMode()
-* degrees()
-* radians()
-* sin()
-* cos()
-* tan()
+## Foundation
 
-## Typography
-* loadFont() --create new font
-* text() --display text, at x,y
-* textFont() --change to loaded font
-* textWidth() --returns width of text
-* textHeight() -- returns height of text
-* textAlign() --first parameter sets horizontal alignment LEFT (default), CENTER, or RIGHT. Optional second parameter sets TOP, CENTER or BOTTOM vertical alignment.
-* textSize()
-
-### Loading and Displaying
-* image()
-* imageMode()
-* loadImage()
-* noTint()
-* tint()
-* save()
-* cursor() (see https://www.love2d.org/wiki/love.mouse.setCursor )
-* noCursor()
-
-### Pixels
-
-* filter() --implemented basic implementation with shaders
+* [for](for.md)
+* [function](function.md)
+* [if](if.md)
+* [local](local.md)
+* <s>[Table](#)</s>
+* [Boolean](boolean.md)
+* <s>[Number](#)</s>
+* <s>[while](#)</s>

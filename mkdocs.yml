@@ -1,12 +1,12 @@
 site_name: "L5: A Processing Library in Lua"
-site_url: https://l5.github.io
+site_url: https://l5lua.org
 theme:
   name: material
   palette:
     primary: gold
     accent: blue
   logo: assets/L5-logo-blob.png
-  font:
+  font:  
     text: Poppins
     code: Fira Code
   favicon: assets/L5-logo-blob.png
@@ -19,23 +19,24 @@ extra:
 nav:
   - Welcome to L5: index.md
   - Download: download.md
+  - L5 for Processing-p5.js programmers: L5-for-processingp5.md
   - Reference: 
-    - Reference: reference/index.md
-    - arc: reference/arc.md
-    - ellipse: reference/ellipse.md
-    - circle: reference/circle.md
-    - line: reference/line.md
-    - point: reference/point.md
-    - quad: reference/quad.md
-    - rect: reference/rect.md
-    - square: reference/square.md
-    - triangle: reference/triangle.md
-    - ellipseMode: reference/ellipseMode.md
-    - noSmooth: reference/noSmooth.md
-    - rectMode: reference/rectMode.md
-    - smooth: reference/smooth.md
-    - strokeJoin: reference/strokeJoin.md
-    - strokeWeight: reference/strokeWeight.md
-    - bezier: reference/bezier.md
+    - Reference Summary: reference/index.md
+    - Shape: reference/#shape
+    - Color: reference/#color
+    - Typography: reference/#typography
+    - Image: reference/#image
+    - Transform: reference/#transform
+    - Environment: reference/#environment
+    - Rendering: reference/#rendering
+    - Math: reference/#math
+    - IO: reference/#io
+    - Events: reference/#events
+    - Data: reference/#data
+    - Structure: reference/#structure
+    - Constants: reference/#constants
+    - Foundation: reference/#foundation
   - Bug Reports: bug-reports.md
+  - Contributing: contributing.md
+  - For developers: how.md
   - Copyleft: copyleft.md
