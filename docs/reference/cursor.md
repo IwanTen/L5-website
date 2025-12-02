@@ -1,10 +1,8 @@
 # cursor()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Changes the cursor's appearance.
 
-The first parameter, `type`, sets the type of cursor to display. The built-in options are `ARROW`, `IBEAM`, `WAIT`, `CROSSHAIR`, `WAITARROW`, `SIZENWSE`, `SIZENESW`, `SIZEWE`, `SIZENS`, `SIZEALL`.
+The first parameter, `type`, sets the type of cursor to display. The built-in options are `ARROW`, `IBEAM`, `WAIT`, `CROSSHAIR`, `WAITARROW`, `SIZENWSE`, `SIZENESW`, `SIZEWE`, `SIZENS`, `SIZEALL`, `NO`, `HAND`.
 
 If the path to an image is passed, as in `cursor('/assets/target.png')`, then the image will be used as the cursor. Images should generally be at most 32 by 32 pixels large.
 
@@ -27,6 +25,35 @@ function draw()
 
   -- Set the cursor to crosshairs: +
   cursor(CROSSHAIR)
+end
+```
+
+![Cursor example 2](assets/cursor2.gif)
+
+```lua
+function setup() 
+  size(100, 100)
+
+  describe('A gray square divided into quadrants. The cursor image changes when the mouse moves to each quadrant.')
+end
+
+function draw() 
+  background(200)
+
+  -- Divide the canvas into quadrants.
+  line(50, 0, 50, 100)
+  line(0, 50, 100, 50)
+
+  -- Change cursor based on mouse position.
+  if mouseX < 50 and mouseY < 50 then
+    cursor(CROSSHAIR)
+  elseif mouseX > 50 and mouseY < 50 then
+    cursor(WAIT)
+  elseif mouseX > 50 and mouseY > 50 then
+    cursor('assets/purplecurves.png');
+   else 
+    cursor(NO)
+  end
 end
 ```
 

@@ -1,14 +1,10 @@
-# displayWidth()
+# displayWidth
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A `Number` variable that stores the width of the screen display.
 
-`displayWidth` is useful for running full-screen programs. Its value
-depends on the current pixelDensity().
+`displayWidth` is useful for running full-screen programs. Its value depends on the current pixelDensity().
 
-Note: The actual screen width can be computed as
-`displayWidth * pixelDensity()`.
+Note: The actual screen width can be computed as `displayWidth * pixelDensity()`.
 
 ## Examples
 
@@ -28,5 +24,7 @@ end
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [displayHeight](displayHeight.md)
+* [displayDensity()](displayDensity.md)
+* [size()](size.md)
+* [fullscreen()](fullscreen.md)

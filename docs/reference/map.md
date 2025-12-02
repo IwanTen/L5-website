@@ -1,20 +1,10 @@
 # map()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Re-maps a number from one range to another.
 
-For example, calling `map(2, 0, 10, 0, 100)` returns 20. The first three
-arguments set the original value to 2 and the original range from 0 to 10.
-The last two arguments set the target range from 0 to 100. 20's position
-in the target range [0, 100] is proportional to 2's position in the
-original range [0, 10].
+For example, calling `map(2, 0, 10, 0, 100)` returns 20. The first three arguments set the original value to 2 and the original range from 0 to 10. The last two arguments set the target range from 0 to 100. 20's position in the target range [0, 100] is proportional to 2's position in the original range [0, 10].
 
-The sixth parameter, `withinBounds`, is optional. By default, `map()` can
-return values outside of the target range. For example,
-`map(11, 0, 10, 0, 100)` returns 110. Passing `true` as the sixth parameter
-constrains the remapped value to the target range. For example,
-`map(11, 0, 10, 0, 100, true)` returns 100.
+The sixth parameter, `withinBounds`, is optional. By default, `map()` can return values outside of the target range. For example, `map(11, 0, 10, 0, 100)` returns 110. Passing `true` as the sixth parameter constrains the remapped value to the target range. For example, `map(11, 0, 10, 0, 100, true)` returns 100.
 
 ## Examples
 
@@ -41,7 +31,54 @@ function draw()
 end
 ```
 
+![map example 2](assets/map2.webp)
+
+```lua
+function setup() 
+  size(100,100)
+
+  describe('A circle changes color from black to white as the mouse moves from left to right.')
+end
+
+function draw() 
+  background(200)
+
+  -- Remap mouseX from [0, 100] to [0, 255]
+  local c = map(mouseX, 0, 100, 0, 255)
+
+  -- Style the circle.
+  fill(c)
+
+  -- Draw the circle.
+  circle(50, 50, 20)
+end
+```
+
+## Syntax
+
+```lua
+map(value, start1, stop1, start2, stop2, [withinBounds])
+```
+
+## Parameters
+
+| Parameter    |                                                         |
+| -            | --                                                      |
+| value        | Number: the value to be remapped.                       |
+| start1       | Number: lower bound of the value's current range.       |
+| stop1        | Number: upper bound of the value's current range.       |
+| start2       | Number: lower bound of the value's target range.        |
+| stop2        | Number: upper bound of the value's target range.        |
+| withinBounds | Boolean: constrain the value to the newly mapped range. |
+
+## Returns
+
+Number: remapped number.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [constrain()](constrain.md)
+* [abs()](abs.md)
+* [round()](round.md)
+* [dist()](dist.md)
+

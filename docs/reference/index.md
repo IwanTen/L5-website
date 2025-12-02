@@ -1,5 +1,3 @@
-**Note: As of November 2025 the reference is currently in-process. All pages that were automatically ported from p5.js to L5 and haven't yet been checked, fixed and updated have a bolded note at the top of their page. On those pages the code is likely incorrect, and the description or parameters might be wrong!**
-
 ## Shape
 
 ### 2D Primitives
@@ -114,13 +112,12 @@
 * [frameCount](frameCount.md)
 * [frameRate()](frameRate.md)
 * [fullscreen()](fullscreen.md)
+* [height](height.md)
 * [noCursor()](noCursor.md)
-* [pixelDensity()](pixelDensity.md)
+* <s>[pixelDensity()](#)</s>
 * [print()](print.md)
 * [width](width.md)
-* [windowHeight](windowHeight.md)
 * [windowResized()](windowResized.md)
-* [windowWidth](windowWidth.md)
 
 ## Rendering
 
@@ -128,7 +125,7 @@
 * [size()](size.md) - Creates a window of specified dimensions
 * [createGraphics()](createGraphics.md)
 * <s>[noCanvas()](#)</s>
-* [resizeCanvas()](resizeCanvas.md)
+* [resizeWindow()](resizeWindow.md)
 
 ## Math
 
@@ -273,7 +270,7 @@
 * [function](function.md)
 * [if](if.md)
 * [local](local.md)
-* <s>[Table](#)</s>
+* [Table](table.md)
 * [Boolean](boolean.md)
 * <s>[Number](#)</s>
 * <s>[while](#)</s>

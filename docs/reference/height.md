@@ -1,14 +1,9 @@
-# height()
+# height
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A `Number` variable that stores the height of the canvas in pixels.
 
-`height`'s default value is 100. Calling
-createCanvas() or
-resizeCanvas() changes the value of
-`height`. Calling noCanvas() sets its value to
-0.
+`height`'s default value is 600. Calling size() or
+resizeWindow() changes the value of `height`. 
 
 ## Examples
 
@@ -21,11 +16,20 @@ function setup()
   -- Display the canvas' height.
   text(height, 42, 54)
 
-  describe('The number 100 written in black on a gray square.')
+  describe('The number 100 written on a gray square.')
 end
+```
+
+## Syntax
+
+```lua
+height
 ```
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [width()](width.md)
+* [size()](size.md)
+* [displayWidth](displayWidth.md)
+* [displayHeight](displayHeight.md)
+* [fullscreen()](fullscreen.md)

@@ -1,14 +1,8 @@
 # asin()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Calculates the arc sine of a number.
 
-`asin()` is the inverse of sin(). It expects input
-values in the range of -1 to 1. By default, `asin()` returns values in the
-range -π ÷ 2 (about -1.57) to π ÷ 2 (about 1.57). If
-the angleMode() is `DEGREES` then values are
-returned in the range -90 to 90.
+`asin()` is the inverse of sin(). It expects input values in the range of -1 to 1. By default, `asin()` returns values in the range -π ÷ 2 (about -1.57) to π ÷ 2 (about 1.57). If the angleMode() is `DEGREES` then values are returned in the range -90 to 90.
 
 ## Examples
 
@@ -19,6 +13,7 @@ function setup()
   size(100, 100)
 
   background(200)
+  fill(0)
 
   -- Calculate sin() and asin() values.
   local a = PI / 3
@@ -26,15 +21,55 @@ function setup()
   local as = asin(s)
 
   -- Display the values.
-  text(`$round(a, 3)end`, 35, 25)
-  text(`$round(s, 3)end`, 35, 50)
-  text(`$round(as, 3)end`, 35, 75)
+  text(round(a, 3), 35, 25)
+  text(round(s, 3), 35, 50)
+  text(round(as, 3), 35, 75)
 
   describe('The numbers 1.047, 0.866, and 1.047 written on separate rows.')
 end
 ```
 
+![asin example 2](assets/asin2.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  fill(0)
+  background(200)
+
+  -- Calculate sin() and asin() values.
+  local a = PI + PI / 3
+  local s = sin(a)
+  local as = asin(s)
+
+  -- Display the values.
+  text(round(a, 3), 35, 25)
+  text(round(s, 3), 35, 50)
+  text(round(as, 3), 35, 75)
+
+  describe('The numbers 4.189, -0.866, and -1.047 written on separate rows.')
+end
+```
+
+## Syntax
+
+```lua
+asin(value)
+```
+
+## Parameters
+
+| Parameter |                                                  |
+| -         | --                                               |
+| value     | Number: value whose arc sine is to be returned   |
+
+## Returns
+
+Number: arc sine of the given value
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [acos()](acos.md)
+* [angleMode()](angleMode.md)
+* [atan()](atan.md)

@@ -1,13 +1,8 @@
 # frameCount()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+A `Number` variable that tracks the number of frames drawn since the sketch started.
 
-A `Number` variable that tracks the number of frames drawn since the sketch
-started.
-
-`frameCount`'s value is 0 inside setup(). It
-increments by 1 each time the code in draw()
-finishes executing.
+`frameCount`'s value is 0 inside setup(). It increments by 1 each time the code in draw() finishes executing.
 
 ## Examples
 
@@ -30,7 +25,32 @@ function setup()
 end
 ```
 
+![frameCount example 2](assets/frameCount2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+
+  -- Set the frameRate to 30.
+  frameRate(30)
+
+  textSize(30)
+  textAlign(CENTER, CENTER)
+
+  describe('A number written in the middle of a gray square. Its value increases rapidly.')
+end
+
+function draw() 
+  background(200)
+
+  -- Display the value of
+  -- frameCount.
+  text(frameCount, 50, 50)
+end
+```
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [frameRate()](frameRate.md)
+* [deltaTime()](deltaTime.md)
+* [millis()](millis.md)

@@ -1,15 +1,12 @@
 # focused()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+A `Boolean` variable that's `true` if the window is focused and `false` if not.
 
-A `Boolean` variable that's `true` if the browser is focused and `false` if
-not.
-
-Note: The browser window can only receive input if it's focused.
+Note: The window can only receive input if it's focused.
 
 ## Examples
 
-![focused example 1](assets/focused1.webp)
+![focused example 1](assets/focused1.gif)
 
 ```lua
 -- Open this example in two separate browser
@@ -18,22 +15,25 @@ Note: The browser window can only receive input if it's focused.
 function setup()
   size(100, 100)
 
-  describe('A square changes color from green to red when the browser window is out of focus.')
+  describe('A square changes color from green to red when the window is out of focus.')
 end
 
 function draw()
   -- Change the background color
-  -- when the browser window
+  -- when the window
   -- goes in/out of focus.
-  if (focused == true) 
+  if focused then
     background(0, 255, 0)
-  end else 
+  else 
     background(255, 0, 0)
   end
 end
+
 ```
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [cursor()](cursor.md)
+* [mousePressed()](mousePressed.md)
+* [mouseReleased()](mouseReleased.md)
+* [keyPressed()](keyPressed.md)

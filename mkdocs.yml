@@ -6,12 +6,12 @@ theme:
     primary: gold
     accent: blue
   logo: assets/L5-logo-blob.png
-  font:  
-    text: Poppins
-    code: Fira Code
+  font: false
   favicon: assets/L5-logo-blob.png
   features:
     - navigation.indexes
+    - content.code.copy          # Copy button
+    - content.code.select        # Allow selecting code
 extra_css:
  - stylesheets/extra.css
 extra:

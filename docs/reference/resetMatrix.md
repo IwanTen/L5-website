@@ -1,7 +1,5 @@
 # resetMatrix()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Clears all transformations applied to the coordinate system.
 
 ## Examples
@@ -37,7 +35,16 @@ function draw()
 end
 ```
 
+## Syntax
+
+```lua
+resetMatrix()
+```
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [applyMatrix()](applyMatrix.md)
+* [rotate()](rotate.md)
+* [scale()](scale.md)
+* [push()](push.md)
+* [pop()](pop.md)

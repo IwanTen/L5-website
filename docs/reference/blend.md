@@ -97,7 +97,7 @@ blend(srcImage, sx, sy, sw, sh, dx, dy, dw, dh, blendMode)
 
 | Parameter |                                                                                                    |
 | -         | --                                                                                                 |
-| srcImage  | p5.Image: source image.                                                                            |
+| srcImage  | Source image.                                                                                      |
 | sx        | Integer: x-coordinate of the source's upper-left corner.                                           |
 | sy        | Integer: y-coordinate of the source's upper-left corner.                                           |
 | sw        | Integer: source image width.                                                                       |

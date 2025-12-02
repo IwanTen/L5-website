@@ -1,12 +1,8 @@
 # ceil()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+Calculates the closest integer value that is greater than or equal to a number.
 
-Calculates the closest integer value that is greater than or equal to a
-number.
-
-For example, calling `ceil(9.03)` and `ceil(9.97)` both return the value
-10.
+For example, calling `ceil(9.03)` and `ceil(9.97)` both return the value 10.
 
 ## Examples
 
@@ -39,7 +35,26 @@ function setup()
 end
 ```
 
+## Syntax
+
+```lua
+ceil(n)
+```
+
+## Parameters
+
+| Parameter |                              |
+| -         | --                           |
+| n         | Number: number to round up.  |
+
+## Returns
+
+Number: rounded up number
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [abs()](abs.md)
+* [floor()](floor.md)
+* [round()](round.md)
+* [int()](int.md)
+

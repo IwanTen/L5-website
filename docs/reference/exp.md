@@ -1,9 +1,6 @@
 # exp()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
-Calculates the value of Euler's number e (2.71828...) raised to the power
-of a number.
+Calculates the value of Euler's number e (2.71828...) raised to the power of a number.
 
 ## Examples
 
@@ -35,7 +32,51 @@ function setup()
 end
 ```
 
+![exp example 2](assets/exp2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+
+  background(200)
+
+  describe('A series of black dots that grow exponentially from left to right.')
+end
+
+function draw() 
+  -- Invert the y-axis.
+  scale(1, -1);
+  translate(0, -100)
+
+  -- Calculate the coordinates.
+  local x = frameCount;
+  local y = 0.005 * exp(x * 0.1)
+
+  -- Draw a point.
+  point(x, y)
+end
+```
+
+## Syntax
+
+```lua
+exp(n)
+```
+
+## Parameters
+
+| Parameter |                              |
+| -         | --                           |
+| n         | Number: exponent to raise.   |
+
+## Returns
+
+Number: e^n
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [pow()](pow.md)
+* [abs()](abs.md)
+* [ceil()](ceil.md)
+* [constrain()](constrain.md)
+* [dist()](dist.md)

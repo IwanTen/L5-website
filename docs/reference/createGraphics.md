@@ -1,7 +1,5 @@
 # createGraphics()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Creates an offscreen canvas that can be rendered to the window later.
 
 `createGraphics()` creates an offscreen drawing canvas (graphics buffer) and returns it as a graphics object. Drawing to a separate graphics buffer can be helpful for performance and for organizing code.
@@ -53,3 +51,7 @@ createGraphics([width], [height])
 ## Related
 
 * [image()](image.md)
+* [size()](size.md)
+* [resizeWindow()](resizeWindow.md)
+* [width](width.md)
+* [height](height.md)

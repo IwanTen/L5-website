@@ -1,29 +1,10 @@
 # saveStrings()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+Saves an ordered table array of strings to a file, one per line.
 
-Saves an `Array` of `String`s to a file, one per line.
+The first parameter, `list`, is an ordered table array with the strings to save.
 
-The first parameter, `list`, is an array with the strings to save.
-
-The second parameter, `filename`, is a string that sets the file's name.
-For example, calling `saveStrings(['0', '01', '011'], 'data.txt')` saves
-the array `['0', '01', '011']` to a file called `data.txt` on the user's
-computer.
-
-The third parameter, `extension`, is optional. If a string is passed, as in
-`saveStrings(['0', '01', '0`1'], 'data', 'txt')`, the second parameter will
-be interpreted as the file name and the third parameter as the extension.
-
-The fourth parameter, `isCRLF`, is also optional, If `true` is passed, as
-in `saveStrings(['0', '01', '011'], 'data', 'txt', true)`, then two
-characters, `\r\n` , will be added to the end of each string to create new
-lines in the saved file. `\r` is a carriage return (CR) and `\n` is a line
-feed (LF). By default, only `\n` (line feed) is added to each string in
-order to create new lines.
-
-Note: The browser will either save the file immediately or prompt the user
-with a dialogue window.
+The second parameter, `filename`, is a string that sets the file's name. For example, calling `saveStrings({'0', '01', '011'}, 'data.txt')` saves the array `{'0', '01', '011'}` to a file called `data.txt` on the user's computer.
 
 ## Examples
 
@@ -34,31 +15,78 @@ function setup()
   size(100, 100)
 
   background(200)
+  fill(0)
 
   -- Style the text.
   textAlign(LEFT, CENTER)
-  textFont('Courier New')
   textSize(12)
 
   -- Display instructions.
-  text('Double-click to save', 5, 50, 90)
+  text('Click to save', 5, 50, 90)
 
-  describe('The text "Double-click to save" written in black on a gray background.')
+  describe('The text "Click to save" written in black on a gray background.')
 end
 
--- Save the file when the user double-clicks.
-function doubleClicked()
-  if (mouseX > 0  and  mouseX < 100  and  mouseY > 0  and  mouseY < 100) 
+-- Save the file when the user clicks.
+function mousePressed()
+  if mouseX > 0  and  mouseX < 100  and  mouseY > 0  and  mouseY < 100  then
     -- Create an array.
-    local data = ['0', '01', '011']
+    local data = {'0', '01', '011'}
 
     -- Save the text file.
     saveStrings(data, 'data.txt')
   end
 end
+
 ```
+
+![saveStrings example 2](assets/saveStrings1.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  background(200)
+  fill(0)
+
+  -- Style the text.
+  textAlign(LEFT, CENTER)
+  textSize(12)
+
+  -- Display instructions.
+  text('Click to save', 5, 50, 90)
+
+  describe('The text "Click to save" written in black on a gray background.')
+end
+
+-- Save the file when the user double-clicks.
+function mousePressed()
+    -- Create an array.
+    -- ASCII art courtesy Wikipedia:
+    -- https:--en.wikipedia.org/wiki/ASCII_art
+    local data = {' (\\_/) ', "(='.'=)", '(")_(")'}
+
+    -- Save the text file.
+    saveStrings(data, 'cat.txt')
+end
+```
+
+## Syntax
+
+```lua
+saveStrings(list, filename)
+```
+
+## Parameters
+
+| Parameter |                                                                               |
+| -         | --                                                                            |
+| list      | table: data to save                                                           |
+| filename  | String: any sequence of letters and numbers, optionally with '.png' extension |
+
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [saveTable()](saveTable.md)
+* [print()](print.md)
+* [save()](save.md)

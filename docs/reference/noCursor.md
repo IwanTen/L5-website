@@ -1,7 +1,5 @@
 # noCursor()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Hides the cursor from view.
 
 ## Examples
@@ -10,6 +8,8 @@ Hides the cursor from view.
 
 ```lua
 function setup()
+  size(100,100)
+  windowTitle('noCursor example')
   -- Hide the cursor.
   noCursor()
 end
@@ -25,5 +25,5 @@ end
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [cursor()](cursor.md)
+* [describe()](describe.md)

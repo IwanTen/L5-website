@@ -1,11 +1,8 @@
 # fract()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Calculates the fractional part of a number.
 
-A number's fractional part includes its decimal values. For example,
-`fract(12.34)` returns 0.34.
+A number's fractional part includes its decimal values. For example, `fract(12.34)` returns 0.34.
 
 ## Examples
 
@@ -20,6 +17,7 @@ function setup()
   -- Style the text.
   textAlign(CENTER)
   textSize(16)
+  fill(0)
 
   -- Original number.
   local n = 56.78
@@ -33,7 +31,26 @@ function setup()
 end
 ```
 
+## Syntax
+
+```lua
+fract(n)
+```
+
+## Parameters
+
+| Parameter |                                                        |
+| -         | --                                                     |
+| n         | Number: number whose fractional part will be computed. |
+
+## Returns
+
+Number: fractional part of n.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [abs()](abs.md)
+* [ceil()](ceil.md)
+* [constrain()](constrain.md)
+* [dist()](dist.md)
+

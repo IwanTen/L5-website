@@ -1,7 +1,5 @@
 # constrain()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Constrains a number between a minimum and maximum value.
 
 ## Examples
@@ -26,7 +24,57 @@ function draw()
 end
 ```
 
+![constrain example 2](assets/constrain2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+
+  describe('Two vertical lines. Two circles move horizontally with the mouse. One circle stops at the vertical lines.')
+end
+
+function draw() 
+  background(200)
+
+  -- Set boundaries and draw them.
+  local leftWall = 25
+  local rightWall = 75
+  line(leftWall, 0, leftWall, 100)
+  line(rightWall, 0, rightWall, 100)
+
+  -- Draw a circle that follows the mouse freely.
+  fill(255)
+  circle(mouseX, 33, 9)
+
+  -- Draw a circle that's constrained.
+  local xc = constrain(mouseX, leftWall, rightWall)
+  fill(0)
+  circle(xc, 67, 9)
+end
+```
+
+## Syntax
+
+```lua
+constrain(n, low, high)
+```
+
+## Parameters
+
+| Parameter |                              |
+| -         | --                           |
+| n         | Number: number to constrain. |
+| low       | Number: minimum limit.      |
+| high     | Number: minimum limit.      |
+
+## Returns
+
+Number: constrained number
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [abs()](abs.md)
+* [floor()](floor.md)
+* [round()](round.md)
+* [int()](int.md)
+

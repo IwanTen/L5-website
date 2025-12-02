@@ -1,9 +1,6 @@
 # floor()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
-Calculates the closest integer value that is less than or equal to the
-value of a number.
+Calculates the closest integer value that is less than or equal to the value of a number.
 
 ## Examples
 
@@ -34,7 +31,26 @@ function setup()
 end
 ```
 
+## Syntax
+
+```lua
+floor(n)
+```
+
+## Parameters
+
+| Parameter |                               |
+| -         | --                            |
+| n         | Number: number to round down. |
+
+## Returns
+
+Number: rounded down number
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [abs()](abs.md)
+* [ceil()](ceil.md)
+* [round()](round.md)
+* [int()](int.md)
+

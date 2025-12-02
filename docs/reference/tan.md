@@ -1,14 +1,8 @@
 # tan()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Calculates the tangent of an angle.
 
-`tan()` is useful for many geometric tasks in creative coding. The values
-returned range from -Infinity to Infinity and repeat periodically as the
-input angle increases. `tan()` calculates the tan of an angle, using radians
-by default, or according to
-if angleMode() setting (RADIANS or DEGREES).
+`tan()` is useful for many geometric tasks in creative coding. The values returned range from -Infinity to Infinity and repeat periodically as the input angle increases. `tan()` calculates the tan of an angle, using radians by default, or according to angleMode() setting (RADIANS or DEGREES).
 
 ## Examples
 
@@ -33,7 +27,26 @@ function draw()
 end
 ```
 
+## Syntax
+
+```lua
+tan(angle)
+```
+
+## Parameters
+
+| Parameter |                                                                                                       |
+| -         | --                                                                                                    |
+| angle     | Number: the angle, in radians by default, or according to angleMode() setting (RADIANS or DEGREES) |
+
+## Returns
+
+Number: tangent of the angle
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [acos()](acos.md)
+* [angleMode()](angleMode.md)
+* [asin()](asin.md)
+* [atan()](atan.md)
+

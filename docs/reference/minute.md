@@ -1,7 +1,5 @@
 # minute()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Returns the current minute as a number from 0–59.
 
 ## Examples
@@ -13,6 +11,7 @@ function setup()
   size(100, 100)
 
   background(200)
+  fill(0)
 
   -- Get the current minute.
   local m = minute()
@@ -20,16 +19,23 @@ function setup()
   -- Style the text.
   textAlign(LEFT, CENTER)
   textSize(12)
-  textFont('Courier New')
 
   -- Display the minute.
-  text(`Current minute: $mend`, 10, 50, 80)
+  text('Current minute: '..m, 10, 50, 80)
 
-  describe(`The text 'Current minute: $mend' written in black on a gray background.`)
+  describe('The text "Current minute: '..m..'" written in black on a gray background.')
 end
 ```
 
+## Returns
+
+Integer: current minute between 0 and 59.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [year()](year.md)
+* [month()](month.md)
+* [day()](day.md)
+* [hour()](hour.md)
+* [second()](second.md)
+

@@ -1,15 +1,10 @@
 # norm()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
 Maps a number from one range to a value between 0 and 1.
 
-For example, `norm(2, 0, 10)` returns 0.2. 2's position in the original
-range [0, 10] is proportional to 0.2's position in the range [0, 1]. This
-is the same as calling `map(2, 0, 10, 0, 1)`.
+For example, `norm(2, 0, 10)` returns 0.2. 2's position in the original range [0, 10] is proportional to 0.2's position in the range [0, 1]. This is the same as calling `map(2, 0, 10, 0, 1)`.
 
-Numbers outside of the original range are not constrained between 0 and 1.
-Out-of-range values are often intentional and useful.
+Numbers outside of the original range are not constrained between 0 and 1. Out-of-range values are often intentional and useful.
 
 ## Examples
 
@@ -34,7 +29,28 @@ function draw()
 end
 ```
 
+## Syntax
+
+```lua
+norm(value, start, stop)
+```
+
+## Parameters
+
+| Parameter |                                                                    |
+| -         | --                                                                 |
+| value     | Number: incoming value to be normalized.                           |
+| start     | Number: lower bound of the value's current range.                  |
+| stop      | Number: upper bound of the value's current range.                  |
+
+## Returns
+
+Number: normalized number.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [map()](map.md)
+* [abs()](abs.md)
+* [constrain()](constrain.md)
+* [dist()](dist.md)
+

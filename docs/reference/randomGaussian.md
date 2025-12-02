@@ -1,29 +1,18 @@
 # randomGaussian()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Returns a random number fitting a Gaussian, or normal, distribution.
 
-Normal distributions look like bell curves when plotted. Values from a
-normal distribution cluster around a central value called the mean. The
-cluster's standard deviation describes its spread.
+Normal distributions look like bell curves when plotted. Values from a normal distribution cluster around a central value called the mean. The cluster's standard deviation describes its spread.
 
-By default, `randomGaussian()` produces different results each time a
-sketch runs. The randomSeed() function can be
-used to generate the same sequence of numbers each time a sketch runs.
+By default, `randomGaussian()` produces different results each time a sketch runs. The randomSeed() function can be used to generate the same sequence of numbers each time a sketch runs.
 
-There's no minimum or maximum value that `randomGaussian()` might return.
-Values far from the mean are very unlikely and values near the mean are
-very likely.
+There's no minimum or maximum value that `randomGaussian()` might return. Values far from the mean are very unlikely and values near the mean are very likely.
 
-The version of `randomGaussian()` with no parameters returns values with a
-mean of 0 and standard deviation of 1.
+The version of `randomGaussian()` with no parameters returns values with a mean of 0 and standard deviation of 1.
 
-The version of `randomGaussian()` with one parameter interprets the
-argument passed as the mean. The standard deviation is 1.
+The version of `randomGaussian()` with one parameter interprets the argument passed as the mean. The standard deviation is 1.
 
-The version of `randomGaussian()` with two parameters interprets the first
-argument passed as the mean and the second as the standard deviation.
+The version of `randomGaussian()` with two parameters interprets the first argument passed as the mean and the second as the standard deviation.
 
 ## Examples
 
@@ -60,6 +49,25 @@ function draw()
 end
 ```
 
+## Syntax
+
+```lua
+randomGaussian([mean], [sd])
+```
+
+## Parameters
+
+| Parameter |                                                                    |
+| -         | --                                                                 |
+| mean      | Number: mean.                                                      |
+| sd        | Number: standard deviation.                                        |
+
+## Returns
+
+Number: random number.
+
 ## Related
 
+* [random()](random.md)
 * [noise()](noise.md)
+* [randomSeed()](randomSeed.md)

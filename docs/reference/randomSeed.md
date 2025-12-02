@@ -1,14 +1,8 @@
 # randomSeed()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+Sets the seed value for the random() and randomGaussian() functions.
 
-Sets the seed value for the random() and
-randomGaussian() functions.
-
-By default, random() and
-randomGaussian() produce different
-results each time a sketch is run. Calling `randomSeed()` with a constant
-argument, such as `randomSeed(99)`, makes these functions produce the same
+By default, `random()` and `randomGaussian()` produce different results each time a sketch is run. Calling `randomSeed()` with a constant argument, such as `randomSeed(99)`, makes these functions produce the same
 results each time a sketch is run.
 
 ## Examples
@@ -16,6 +10,7 @@ results each time a sketch is run.
 ![randomSeed example 1](assets/randomSeed1.webp)
 
 ```lua
+
 function setup()
   size(100, 100)
 
@@ -39,11 +34,23 @@ function setup()
   fill(0)
   circle(x, y, 10)
 
-  describe('A white circle appears at a random position. A black circle appears at (27.4, 25.8).')
+  describe('A white circle appears at a random position. A black circle appears at (47.3, 91.2).')
 end
 ```
 
+## Syntax
+
+```lua
+randomSeed(seed)
+```
+
+## Parameters
+
+| Parameter |                                  |
+| -         | --                               |
+| seed      | Number: seed value.              |
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [random()](random.md)
+* [randomGaussian()](randomGaussian.md)

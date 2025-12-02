@@ -1,7 +1,7 @@
 # pixelDensity()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
+**Not currently implemented in L5**
+ 
 Sets the pixel density or returns the current density.
 
 Computer displays are grids of little lights called <em>pixels</em>. A
@@ -21,7 +21,7 @@ density.
 ![pixelDensity example 1](assets/pixelDensity1.webp)
 
 ```lua
-function setup()
+function setup() 
   -- Set the pixel density to 1.
   pixelDensity(1)
 
@@ -49,5 +49,4 @@ pixelDensity([val])
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [displayDensity()](displayDensity.md)

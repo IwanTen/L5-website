@@ -12,3 +12,11 @@ By default Love only allows drawing commands within `love.draw()`, which calls a
 
 `filter()` is implemented through GLSL shader code.
 
+## Roadmap
+
+* [ ] Winter 2025/2026 - L5 mode added to Processing IDE
+* [ ] Winter 2025/2026 - Code refactor
+* [ ] Spring 2026 - Comprehensive Error message system implemented
+* [ ] Spring 2026 - Alpha release 0.1
+* [ ] Summer 2026 - L5sound and L5camera libraries release
+* [ ] Fall 2026 - Add support for 3D

@@ -1,7 +1,5 @@
 # displayDensity()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Returns the display's current pixel density.
 
 ## Examples
@@ -32,7 +30,12 @@ function mousePressed()
 end
 ```
 
+## Returns
+
+Number: current pixel density of the display
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [size()](size.md)
+* [fullsize()](fullsize.md)
+* [pixels](pixels.md)

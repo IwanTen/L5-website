@@ -1,12 +1,8 @@
 # millis()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Returns the number of milliseconds since a sketch started running.
 
-`millis()` keeps track of how long a sketch has been running in
-milliseconds (thousandths of a second). This information is often
-helpful for timing events and animations.
+`millis()` keeps track of how long a sketch has been running in milliseconds (thousandths of a second). This information is often helpful for timing events and animations.
 
 ## Examples
 
@@ -17,6 +13,7 @@ function setup()
   size(100, 100)
 
   background(200)
+  fill(0)
 
   -- Get the number of milliseconds the sketch has run.
   local ms = millis()
@@ -24,18 +21,70 @@ function setup()
   -- Style the text.
   textAlign(LEFT, CENTER)
   textSize(10)
-  textFont('Courier New')
 
   -- Display how long it took setup() to be called.
-  text(`Startup time: $round(ms, 2)end ms`, 5, 50, 90)
+  text('Startup time: '..round(ms, 2)..'ms', 5, 50, 90)
 
   describe(
-    `The text 'Startup time: $round(ms, 2)end ms' written in black on a gray background.`
+    'The text "Startup time: '..round(ms, 2)..'ms" written in black on a gray background.'
   )
 end
 ```
 
+![millis example 2](assets/millis2.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  describe('The text "Running time: S sec" written in black on a gray background. The number S increases as the sketch runs.')
+end
+
+function draw()
+  background(200)
+  fill(0)
+
+  -- Get the number of seconds the sketch has run.
+  local s = millis() / 1000
+
+  -- Style the text.
+  textAlign(LEFT, CENTER)
+  textSize(10)
+
+  -- Display how long the sketch has run.
+  text('Running time: \n'..str(round(s,1))..' sec', 5, 50, 90)
+end
+```
+
+![millis example 3](assets/millis3.gif)
+
+```lua
+function setup()
+  size(100, 100)
+
+  describe('A white circle oscillates left and right on a gray background.')
+end
+
+function draw()
+  background(200)
+
+  -- Get the number of seconds the sketch has run.
+  local s = millis() / 1000
+
+  -- Calculate an x-coordinate.
+  local x = 30 * sin(s) + 50
+
+  -- Draw the circle.
+  circle(x, 50, 30)
+end
+```
+
+## Returns
+
+Number: number of milliseconds since starting the sketch.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [day()](day.md)
+* [hour()](hour.md)
+* [minute()](minute.md)

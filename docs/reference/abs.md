@@ -1,12 +1,8 @@
 # abs()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Calculates the absolute value of a number.
 
-A number's absolute value is its distance from zero on the number line.
--5 and 5 are both five units away from zero, so calling `abs(-5)` and
-`abs(5)` both return 5. The absolute value of a number is always positive.
+A number's absolute value is its distance from zero on the number line. -5 and 5 are both five units away from zero, so calling `abs(-5)` and `abs(5)` both return 5. The absolute value of a number is always positive.
 
 ## Examples
 
@@ -34,7 +30,24 @@ function draw()
 end
 ```
 
+## Syntax
+
+```lua
+abs(n)
+```
+
+## Parameters
+
+| Parameter |                              |
+| -         | --                           |
+| n         | Number: number to compute.   |
+
+## Returns
+
+Number: absolute value of given number
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [ceil()](ceil.md)
+* [constrain()](constrain.md)
+* [dist()](dist.md)

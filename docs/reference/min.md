@@ -1,14 +1,8 @@
 # min()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Returns the smallest value in a sequence of numbers.
 
-The version of `min()` with one parameter interprets it as an array of
-numbers and returns the smallest number.
-
-The version of `min()` with two or more parameters interprets them as
-individual numbers and returns the smallest number.
+`min()` accepts any amount of number arguments or a table of values and returns the smallest number.
 
 ## Examples
 
@@ -34,20 +28,60 @@ function setup()
 end
 ```
 
+![min example 2](assets/min2.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  fill(0)
+  background(200)
+
+  -- Create a table of numbers
+  local numbers = {10, 5, 20}
+
+  -- Calculate the maximum of the table
+  local m = min(numbers)
+
+  -- Style the text.
+  textAlign(CENTER)
+  textSize(16)
+
+  -- Display the max.
+  text(m, 50, 50)
+
+  describe('The number 5 written in the middle of a gray square.')
+end
+```
+
 ## Syntax
 
 ```lua
-min(n0, n1)
+min(n1, n2, .....)
+```
+
+```lua
+min(table)
 ```
 
 ## Parameters
 
-| Parameter | |
-| - | -- |
-| n0 | Number: first number to compare. |
-| n1 | Number: second number to compare. |
+| Parameter |                                        |
+| -         | --                                     |
+| n1        | Number: first number to compare.       |
+| n2        | Number: second number to compare.      |
+| ...       | Number: additional numbers to compare. |
+| table     | Table: table of numbers to compare.    |
+
+## Returns
+
+Number: smallest number.
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [max()](max.md)
+* [abs()](abs.md)
+* [floor()](floor.md)
+* [constrain()](constrain.md)
+* [dist()](dist.md)
+

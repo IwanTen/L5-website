@@ -1,10 +1,8 @@
 # frameRate()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Sets the number of frames to draw per second.
 
-Calling `frameRate()` with one numeric argument, as in `frameRate(30)`, attempts to draw 30 frames per second (FPS). The target frame rate may not be achieved depending on the sketch's processing needs. Most computers default to a frame rate of 60 FPS. Frame rates of 24 FPS and above are fast enough for smooth animations.
+Calling `frameRate()` with one numeric argument, as in `frameRate(30)`, attempts to draw 30 frames per second (FPS). The target frame rate may not be achieved depending on the sketch's processing needs. Frame rates of 24 FPS and above are fast enough for smooth animations.
 
 Calling `frameRate()` without an argument returns the current frame rate. The value returned is an approximation.
 
@@ -40,10 +38,42 @@ function draw()
 end
 ```
 
+![frameRate example 2](assets/frameRate2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+
+  describe('A number written in black on a gray background. The number decreases when the mouse is pressed.')
+end
+
+function draw() 
+  background(200)
+
+  -- If the mouse is pressed, do lots
+  -- of math to slow down drawing.
+  if mouseIsPressed == true then
+    for i = 0,1000000 do
+      random()
+    end
+  end
+
+  -- Get the current frame rate
+  -- and display it.
+  local fps = frameRate()
+  fill(0)
+  text(fps, 50, 50)
+end
+```
+
 ## Syntax
 
 ```lua
 frameRate(fps)
+```
+
+```lua
+frameRate()
 ```
 
 ## Parameters
@@ -54,5 +84,6 @@ frameRate(fps)
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [frameCount](frameCount.md)
+* [deltaTime](deltaTime.md)
+* [millis()](millis.md)

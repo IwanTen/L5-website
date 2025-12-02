@@ -1,7 +1,5 @@
 # pow()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Calculates exponential expressions such as <var>2<sup>3</sup></var>.
 
 For example, `pow(2, 3)` evaluates the expression
@@ -41,7 +39,28 @@ function setup()
 end
 ```
 
+## Syntax
+
+```lua
+pow(n, e)
+```
+
+## Parameters
+
+| Parameter |                                                                    |
+| -         | --                                                                 |
+| n         | Number: base of the exponential expression.                        |
+| e         | Number: power by which to raise the base.                          |
+
+## Returns
+
+Number: n^e.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [exp()](exp.md)
+* [ceil()](ceil.md)
+* [abs()](abs.md)
+* [constrain()](constrain.md)
+* [dist()](dist.md)
+

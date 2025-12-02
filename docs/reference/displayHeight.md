@@ -1,7 +1,5 @@
-# displayHeight()
+# displayHeight
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A `Number` variable that stores the height of the screen display.
 
 `displayHeight` is useful for running full-screen programs. Its value depends on the current pixelDensity().
@@ -26,5 +24,7 @@ end
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [displayWidth()](displayWidth.md)
+* [displayDensity()](displayDensity.md)
+* [size()](size.md)
+* [fullscreen()](fullscreen.md)

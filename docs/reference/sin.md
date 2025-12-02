@@ -1,17 +1,12 @@
 # sin()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
 Calculates the sine of an angle.
 
-`sin()` is useful for many geometric tasks in creative coding. The values
-returned oscillate between -1 and 1 as the input angle increases. `sin()`
-calculates the sine of an angle, using radians by default, or according to
-if angleMode() setting (RADIANS or DEGREES).
+`sin()` is useful for many geometric tasks in creative coding. The values returned oscillate between -1 and 1 as the input angle increases. `sin()` calculates the sine of an angle, using radians by default, or according to if angleMode() setting (RADIANS or DEGREES).
 
 ## Examples
 
-![sin example 1](assets/sin1.webp)
+![sin example 1](assets/sin1.gif)
 
 ```lua
 function setup()
@@ -33,7 +28,67 @@ function draw()
 end
 ```
 
+![sin example 2](assets/sin2.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  background(200)
+
+  describe('A series of black dots form a wave pattern.')
+end
+
+function draw()
+  -- Calculate the coordinates.
+  local x = frameCount
+  local y = 30 * sin(x * 0.1) + 50
+
+  -- Draw the point.
+  point(x, y)
+end
+```
+
+![sin example 3](assets/cos3.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  background(200)
+
+  describe('A series of black dots form an infinity symbol.')
+end
+
+function draw()
+  -- Calculate the coordinates.
+  local x = 30 * cos(frameCount * 0.1) + 50
+  local y = 10 * sin(frameCount * 0.2) + 50
+
+  -- Draw the point.
+  point(x, y)
+end
+```
+
+## Syntax
+
+```lua
+sin(angle)
+```
+
+## Parameters
+
+| Parameter |                                                                                                       |
+| -         | --                                                                                                    |
+| angle     | Number: the angle, in radians by default, or according to angleMode() setting (RADIANS or DEGREES) |
+
+## Returns
+
+Number: sine of the angle
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [acos()](acos.md)
+* [angleMode()](angleMode.md)
+* [asin()](asin.md)
+* [atan()](atan.md)

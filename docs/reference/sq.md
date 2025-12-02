@@ -1,13 +1,8 @@
 # sq()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
 Calculates the square of a number.
 
-Squaring a number means multiplying the number by itself. For example,
-`sq(3)` evaluates 3 × 3 which is 9. `sq(-3)` evaluates -3 × -3
-which is also 9. Multiplying two negative numbers produces a positive
-number. The value returned by `sq()` is always positive.
+Squaring a number means multiplying the number by itself. For example, `sq(3)` evaluates 3 × 3 which is 9. `sq(-3)` evaluates -3 × -3 which is also 9. Multiplying two negative numbers produces a positive number. The value returned by `sq()` is always positive.
 
 ## Examples
 
@@ -31,7 +26,52 @@ function setup()
 end
 ```
 
+![sq example 2](assets/sq2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+
+  background(200)
+
+  describe('A series of black dots that get higher quickly from left to right.')
+end
+
+function draw() 
+  -- Invert the y-axis.
+  scale(1, -1)
+  translate(0, -100)
+
+  -- Calculate the coordinates.
+  local x = frameCount
+  local y = 0.01 * sq(x)
+
+  -- Draw the point.
+  point(x, y)
+end
+```
+
+## Syntax
+
+```lua
+sq(n)
+```
+
+## Parameters
+
+| Parameter |                                                                    |
+| -         | --                                                                 |
+| n         | Number: number to square.                                          |
+
+## Returns
+
+Number: squared number.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [abs()](abs.md)
+* [ceil()](ceil.md)
+* [constrain()](constrain.md)
+* [dist()](dist.md)
+
+

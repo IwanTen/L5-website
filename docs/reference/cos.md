@@ -1,6 +1,4 @@
 # cos()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
 Calculates the cosine of an angle.
 
@@ -11,7 +9,7 @@ if angleMode() setting (RADIANS or DEGREES).
 
 ## Examples
 
-![cos example 1](assets/cos1.webp)
+![cos example 1](assets/angleMode5.gif)
 
 ```lua
 function setup()
@@ -33,7 +31,68 @@ function draw()
 end
 ```
 
+![cos example 2](assets/cos2.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  background(200)
+
+  describe('A series of black dots form a wave pattern.')
+end
+
+function draw()
+  -- Calculate the coordinates.
+  local x = frameCount
+  local y = 30 * cos(x * 0.1) + 50
+
+  -- Draw the point.
+  point(x, y)
+end
+```
+
+![cos example 3](assets/cos3.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  background(200)
+
+  describe('A series of black dots form an infinity symbol.')
+end
+
+function draw()
+  -- Calculate the coordinates.
+  local x = 30 * cos(frameCount * 0.1) + 50
+  local y = 10 * sin(frameCount * 0.2) + 50
+
+  -- Draw the point.
+  point(x, y)
+end
+```
+
+## Syntax
+
+```lua
+cos(angle)
+```
+
+## Parameters
+
+| Parameter |                                                                                                       |
+| -         | --                                                                                                    |
+| angle     | Number: the angle, in radians by default, or according to angleMode() setting (RADIANS or DEGREES) |
+
+## Returns
+
+Number: cosine of the angle
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [acos()](acos.md)
+* [angleMode()](angleMode.md)
+* [asin()](asin.md)
+* [atan()](atan.md)
+

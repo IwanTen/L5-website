@@ -1,11 +1,8 @@
 # log()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Calculates the natural logarithm (the base-e logarithm) of a number.
 
-`log()` expects the `n` parameter to be a value greater than 0 because
-the natural logarithm is defined that way.
+`log()` expects the `n` parameter to be a value greater than 0 because the natural logarithm is defined that way.
 
 ## Examples
 
@@ -29,7 +26,51 @@ function setup()
 end
 ```
 
+![log example 2](assets/log2.webp)
+
+```lua
+function setup() 
+  size(100, 100)
+
+  background(200)
+
+  describe('A series of black dots that get higher slowly from left to right.')
+end
+
+function draw() 
+  -- Invert the y-axis.
+  scale(1, -1)
+  translate(0, -100)
+
+  -- Calculate coordinates.
+  local x = frameCount
+  local y = 15 * log(x)
+
+  -- Draw a point.
+  point(x, y)
+end
+```
+
+## Syntax
+
+```lua
+log(n)
+```
+
+## Parameters
+
+| Parameter |                                                        |
+| -         | --                                                     |
+| n         | Number: number greater than 0.                         |
+
+## Returns
+
+Number: natural logarithm of n.
+
 ## Related
 
-* [exp()](exp.md)
-* [pow()](pow.md)
+* [abs()](abs.md)
+* [ceil()](ceil.md)
+* [constrain()](constrain.md)
+* [dist()](dist.md)
+

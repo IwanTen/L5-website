@@ -1,6 +1,4 @@
 # hour()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
 Returns the current hour as a number from 0–23.
 
@@ -13,23 +11,30 @@ function setup()
   size(100, 100)
 
   background(200)
+  fill(0)
 
-  -- Get the current hour.
+  -- Get the current day.
   local h = hour()
 
   -- Style the text.
   textAlign(LEFT, CENTER)
   textSize(12)
-  textFont('Courier New')
 
-  -- Display the hour.
-  text(`Current hour: $hend`, 20, 50, 60)
+  -- Display the day.
+  text("Current hour: "..h, 20, 50, 60)
 
-  describe(`The text 'Current hour: $hend' written in black on a gray background.`)
+  describe('The text "Current hour: '..h..'" written in black on a gray background.')
 end
 ```
 
+## Returns
+
+Integer: current hour between 0 and 23.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [year()](year.md)
+* [month()](month.md)
+* [day()](day.md)
+* [minute()](minute.md)
+* [second()](second.md)

@@ -1,37 +1,57 @@
 # save()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+Saves a png image from the display window. `save()` can optionally take one argument with the filename to save under. If the filename does not end with a `.png` extension then it will be automatically appended to the filename. Images are saved to the project folder.
 
-Saves a given element(image, text, json, csv, wav, or html) to the client's
-computer. The first parameter can be a pointer to element we want to save.
-The element can be one of p5.Element,an Array of
-Strings, an Array of JSON, a JSON object, a p5.Table
-, a p5.Image, or a p5.SoundFile (requires
-p5.sound). The second parameter is a filename (including extension).The
-third parameter is for options specific to this type of object. This method
-will save a file that fits the given parameters.
-If it is called without specifying an element, by default it will save the
-whole canvas as an image file. You can optionally specify a filename as
-the first parameter in such a case.
-<strong>Note that it is not recommended to
-call this method within draw, as it will open a new save dialog on every
-render.</strong>
+**Note that it is not recommended to call this function within draw as it will save repeatedly on every render.**
 
 ## Examples
 
-![save example 1](assets/save1.webp)
+save example 1
 
 ```lua
--- Saves the canvas as an image
- cnv = size(300, 300)
- save(cnv, 'myCanvas.jpg')
+function setup()
+  fill(0)
+  ellipse(random(width),random(height),random(100),random(100))
 
- -- Saves the canvas as an image by default
- save('myCanvas.jpg')
- describe('An example for saving a canvas as an image.')
+  -- Saves the canvas as an image to a specified filename
+  save('mySketch.png')
+
+  describe('An example for saving a sketch window as an image.')
+end
 ```
+
+save example 2
+
+```lua
+function setup()
+  fill(0)
+  ellipse(random(width),random(height),random(100),random(100))
+  
+  -- Saves the canvas as an image to a randomly generated filename
+  save()
+  
+  describe('An example for saving a canvas as an image.')
+end
+```
+
+## Syntax
+
+```lua
+save(filename)
+```
+
+```lua
+save()
+```
+
+## Parameters
+
+| Parameter |                                                                               |
+| -         | --                                                                            |
+| filename  | String: any sequence of letters and numbers, optionally with '.png' extension |
+
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [print()](print.md)
+* [loadImage()](loadImage.md)

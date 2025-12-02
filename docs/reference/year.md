@@ -1,7 +1,5 @@
 # year()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Returns the current year as a number such as 1999.
 
 ## Examples
@@ -13,6 +11,7 @@ function setup()
   size(100, 100)
 
   background(200)
+  fill(0)
 
   -- Get the current year.
   local y = year()
@@ -20,16 +19,22 @@ function setup()
   -- Style the text.
   textAlign(LEFT, CENTER)
   textSize(12)
-  textFont('Courier New')
 
   -- Display the year.
-  text(`Current year: $yend`, 10, 50, 80)
+  text('Current year: '..y, 10, 50, 80)
 
-  describe(`The text 'Current year: $yend' written in black on a gray background.`)
+  describe('The text "Current year: '..y..'" written in black on a gray background.')
 end
 ```
 
+## Returns
+
+Integer: current year.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [month()](month.md)
+* [day()](day.md)
+* [hour()](hour.md)
+* [minute()](minute.md)
+* [second()](second.md)

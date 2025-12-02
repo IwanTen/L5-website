@@ -1,19 +1,14 @@
 # loadTable()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+Reads the contents of a file or URL and creates a table object with its values. The file's path should be specified relative to the sketch's folder. The file format can be a comma-separated (in CSV format), a tab-separated value (in TSV format), or a lua table (as a lua file). Table only looks for a header row if the 'header' option is included.
 
-Reads the contents of a file or URL and creates a p5.Table object with
-its values. If a file is specified, it must be located in the sketch's
-"data" folder. The filename parameter can also be a URL to a file found
-online. By default, the file is assumed to be comma-separated (in CSV
-format). Table only looks for a header row if the 'header' option is
-included.
+`#table` always returns the total rows in the imported table.
 
-All files loaded and saved use UTF-8 encoding. This method is suitable for fetching files up to size of 64MB.
+`#table.columns` always returns the total columns in the imported table. Without headers, a loaded table's column names are ordered for convenience, from 1 up to the total number of columns.
 
 ## Examples
 
-![loadTable example 1](assets/loadTable1.webp)
+loadTable example 1
 
 ```lua
 -- Given the following CSV file called "mammals.csv"
@@ -24,31 +19,75 @@ All files loaded and saved use UTF-8 encoding. This method is suitable for fetch
 -- 1,Panthera pardus,Leopard
 -- 2,Equus zebra,Zebra
 
-local table
+--my table is comma separated value "csv"
+--and has a header specifying the columns labels
+local mammals = loadTable('assets/mammals.csv', 'header')
 
 function setup()
-  --my table is comma separated value "csv"
-  --and has a header specifying the columns labels
-  table = loadTable('/assets/mammals.csv', 'csv', 'header')
+  print(#mammals..' total rows in table')
+  print(#mammals.columns..' total columns in table.')
 
-  --count the columns
-  print(table.getRowCount() + ' total rows in table')
-  print(table.getColumnCount() + ' total columns in table')
+  -- Print column names
+  for _,header in ipairs(mammals.columns) do
+    print(header)
+  end
 
-  print(table.getColumn('name'))
-  --["Goat", "Leopard", "Zebra"]
-
-  --cycle through the table
-  for (local r = 0; r < table.getRowCount(); r++)
-    for c=0,c < table.getColumnCount() do
-      print(table.getString(r, c))
+  -- cycle through the table
+  for i, mammal in ipairs(mammals) do
+    for _,colName in ipairs(mammals.columns) do
+      print(mammal[colName])
     end
-  describe(`randomly generated text from a file,
-    for example "i smell like butter"`)
+  end
 end
 ```
 
+loadTable example 2
+
+```lua
+-- Given the following CSV file called "mammals.csv"
+-- located in the project's "assets" folder:
+--
+-- 0,Capra hircus,Goat
+-- 1,Panthera pardus,Leopard
+-- 2,Equus zebra,Zebra
+
+--my table is comma separated value "csv"
+--without headers
+local data = loadTable('assets/mammals.csv')
+
+function setup()
+  print(#data..' total rows in table')
+  print(#data.columns..' total columns in table.')
+
+  -- cycle through the table
+  for i, row in ipairs(data) do
+    for _, value in ipairs(row) do
+      print(value)
+    end
+  end
+end
+```
+
+## Syntax
+
+```lua
+loadTable(filename [,header])
+```
+
+## Parameters
+
+| Parameter |                                                    |
+| -         | --                                                 |
+| path      | String: path of the text file to be loaded.        |
+| header    | String: "header" to indicate table has header row. |
+
+## Returns
+
+Table: new table of strings containing the loaded table data.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [table](table.md)
+* [saveStrings()](saveStrings.md)
+* [saveTable()](saveTable.md)
+* [for](for.md)

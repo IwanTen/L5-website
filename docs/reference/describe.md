@@ -1,10 +1,6 @@
 # describe()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
-Creates a screen reader-accessible description of the canvas in the command line.
-
-The parameter `text`, is the description of the canvas.
+Prints an accessibility description to the command line. The parameter text is the canvas description.
 
 ## Examples
 
@@ -12,8 +8,10 @@ The parameter `text`, is the description of the canvas.
 
 ```lua
 function setup()
+  size(100,100)
   background('pink')
-
+  windowTitle('describe example')
+  
   -- Draw a heart.
   fill('red')
   noStroke()
@@ -24,9 +22,16 @@ function setup()
   -- Add a general description of the canvas.
   describe('A pink square with a red heart in the bottom-right corner.')
 end
+
+```
+
+## Syntax
+
+```lua
+describe(textdescription)
 ```
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [windowTitle()](windowTitle.md)
+* [print()](print.md)

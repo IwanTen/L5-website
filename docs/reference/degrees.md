@@ -1,8 +1,4 @@
 # degrees()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
 Converts an angle measured in radians to its value in degrees.
 
@@ -12,15 +8,46 @@ The same angle can be expressed in with either unit. For example, 90° is a quar
 
 ## Examples
 
+![degrees example 1](assets/degrees1.webp)
+
 ```lua
-function setup()
-  rad = PI/4
-  deg = degrees(rad)
-  print(rad.." radians is "..deg.." degrees.")
+function setup() 
+  size(100, 100)
+  fill(0)
+  background(200)
+
+  -- Calculate the angle conversion.
+  local rad = QUARTER_PI
+  local deg = degrees(rad)
+
+  -- Display the conversion.
+  text(round(rad, 2)..'rad = '..deg..'˚', 10, 50)
+
+  describe('The text "0.79 rad = 45˚".')
 end
+
 ```
+
+## Syntax
+
+```lua
+degrees(radians)
+```
+
+## Parameters
+
+| Parameter |                                                                                                       |
+| -         | --                                                                                                    |
+| radians   | Number: radians value to convert to degrees.                                                          |
+
+## Returns
+
+Number:  of the angle
 
 ## Related
 
-* [radians()](radians.md)
 * [angleMode()](angleMode.md)
+* [radians()](radians.md)
+* [acos()](acos.md)
+* [asin()](asin.md)
+* [atan()](atan.md)

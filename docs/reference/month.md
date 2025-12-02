@@ -1,7 +1,5 @@
 # month()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Returns the current month as a number from 1–12.
 
 ## Examples
@@ -13,6 +11,7 @@ function setup()
   size(100, 100)
 
   background(200)
+  fill(0)
 
   -- Get the current month.
   local m = month()
@@ -20,16 +19,23 @@ function setup()
   -- Style the text.
   textAlign(LEFT, CENTER)
   textSize(12)
-  textFont('Courier New')
 
   -- Display the month.
-  text(`Current month: $mend`, 10, 50, 80)
+  text('Current month: '..m, 10, 50, 80)
 
-  describe(`The text 'Current month: $mend' written in black on a gray background.`)
+  describe('The text "Current month: '..m..'" written in black on a gray background.')
 end
 ```
 
+## Returns
+
+Integer: current month between 1 and 12.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [year()](year.md)
+* [day()](day.md)
+* [hour()](hour.md)
+* [minute()](minute.md)
+* [second()](second.md)
+
