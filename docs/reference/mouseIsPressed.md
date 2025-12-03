@@ -1,13 +1,11 @@
 # mouseIsPressed()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A `Boolean` system variable that's `true` if the mouse is pressed and
 `false` if not.
 
 ## Examples
 
-![mouseIsPressed example 1](assets/mouseIsPressed1.webp)
+![mouseIsPressed example 1](assets/mouseIsPressed1.gif)
 
 ```lua
 function setup()
@@ -20,6 +18,7 @@ end
 
 function draw()
   background(200)
+  fill(0)
 
   -- Style the text.
   textAlign(CENTER)
@@ -30,7 +29,51 @@ function draw()
 end
 ```
 
+![mouseIsPressed example 2](assets/keyPressed1.gif)
+
+```lua
+function setup()
+  size(100, 100)
+
+  describe(
+    'A gray square with a white square at its center. The inner square turns black when the user presses the mouse.'
+  )
+end
+
+function draw()
+  background(200)
+
+  -- Style the square.
+  if mouseIsPressed == true then
+    fill(0)
+  else 
+    fill(255)
+  end
+
+  -- Draw the square.
+  square(25, 25, 50)
+end
+```
+
+## Syntax
+
+```lua
+mouseIsPressed
+```
+
+## Returns
+
+Boolean: true or false.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [mouseButton](mouseButton.md)
+* [mouseWheel()](mouseWheel.md)
+* [mouseMoved()](mouseMoved.md)
+* [mouseDragged()](mouseDragged.md)
+* [mouseX](mouseX.md)
+* [mouseY](mouseY.md)
+* [movedX](movedX.md)
+* [movedY](movedY.md)
+* [pmouseX](pmouseX.md)
+* [pmouseY](pmouseY.md)

@@ -1,20 +1,12 @@
 # movedY()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
 A `Number` system variable that tracks the mouse's vertical movement.
 
-`movedY` tracks how many pixels the mouse moves up or down between
-frames. `movedY` will have a negative value if the mouse moves up between
-frames and a positive value if it moves down. `movedY` can be calculated
-as `mouseY - pmouseY`.
-
-Note: `movedY` continues updating even when
-requestPointerLock() is active.
+`movedY` tracks how many pixels the mouse moves up or down between frames. `movedY` will have a negative value if the mouse moves up between frames and a positive value if it moves down. `movedY` can be calculated as `mouseY - pmouseY`.
 
 ## Examples
 
-![movedY example 1](assets/movedY1.webp)
+![movedY example 1](assets/movedY1.gif)
 
 ```lua
 function setup()
@@ -27,22 +19,38 @@ end
 
 function draw()
   background(200)
+  fill(0)
 
   -- Style the text.
   textAlign(CENTER)
   textSize(16)
 
-  -- Display ▼ when movedY is positive and
-  -- ▲ when it's negative.
-  if (movedY > 0) 
-    text('▼', 50, 50)
-  end elseif (movedY < 0) 
-    text('▲', 50, 50)
+  -- Display down when movedY is positive and
+  -- up when it's negative.
+  if movedY > 0 then
+    text('down', 50, 50)
+  elseif movedY < 0 then
+    text('up', 50, 50)
   end
 end
+
 ```
+
+## Syntax
+
+```lua
+movedY
+```
+
+## Returns
+
+Number: positive or negative number tracking vertical movement.
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [movedX](movedX.md)
+* [mouseMoved()](mouseMoved.md)
+* [mouseY](mouseY.md)
+* [mouseClicked()](mouseClicked.md)
+* [mouseButton](mouseButton.md)
+

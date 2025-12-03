@@ -1,53 +1,32 @@
 # mouseDragged()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A function that's called when the mouse moves while a button is pressed.
 
-Declaring the function `mouseDragged()` sets a code block to run
-automatically when the user clicks and drags the mouse:
+Declaring the function `mouseDragged()` sets a code block to run automatically when the user clicks and drags the mouse:
 
-<pre><code class="language-js">function mouseDragged() {
-  // Code to run.
-}
-`</pre>
-The mouse system variables, such as mouseX and
-mouseY, will be updated with their most recent
-value when `mouseDragged()` is called by p5.js:
+```lua
+function mouseDragged() 
+  -- Code to run.
+end
+```
 
-<pre><code class="language-js">function mouseDragged() {
-  if (mouseX < 50) {
-    // Code to run if the mouse is on the left.
-  }
+The mouse system variables, such as mouseX and mouseY, will be updated with their most recent value when `mouseDragged()` is called by L5:
 
-  if (mouseY > 50) {
-    // Code to run if the mouse is near the bottom.
-  }
-}
-`</pre>
-The parameter, `event`, is optional. `mouseDragged()` is always passed a
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/" target="_blank">MouseEvent</a>
-object with properties that describe the mouse drag event:
+```lua
+function mouseDragged() 
+  if mouseX < 50 then
+    -- Code to run if the mouse is on the left.
+  end
 
-<pre><code class="language-js">function mouseDragged(event) {
-  // Code to run that uses the event.
-  console.log(event);
-}
-`</pre>
-On touchscreen devices, `mouseDragged()` will run when a user moves a touch
-point if touchMoved() isn’t declared. If
-touchMoved() is declared, then
-touchMoved() will run when a user moves a
-touch point and `mouseDragged()` won’t.
-
-Browsers may have default behaviors attached to various mouse events. For
-example, some browsers highlight text when the user moves the mouse while
-pressing a mouse button. To prevent any default behavior for this event,
-add `return false;` to the end of the function.
+  if mouseY > 50 then
+    -- Code to run if the mouse is near the bottom.
+  end
+end
+```
 
 ## Examples
 
-![mouseDragged example 1](assets/mouseDragged1.webp)
+![mouseDragged example 1](assets/mouseDragged1.gif)
 
 ```lua
 local value = 0
@@ -72,18 +51,30 @@ end
 
 function mouseDragged()
   -- Update the grayscale value.
-  value += 5
+  value = value + 5
 
   -- Reset the grayscale value.
-  if (value > 255) 
+  if value > 255 then
     value = 0
   end
-  -- Uncomment to prevent any default behavior.
-  -- return false
 end
+```
+
+## Syntax
+
+```lua
+mouseDragged()
 ```
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [mouseButton](mouseButton.md)
+* [mouseWheel()](mouseWheel.md)
+* [mouseMoved()](mouseMoved.md)
+* [mouseClicked()](mouseClicked.md)
+* [mouseX](mouseX.md)
+* [mouseY](mouseY.md)
+* [movedX](movedX.md)
+* [movedY](movedY.md)
+* [pmouseX](pmouseX.md)
+* [pmouseY](pmouseY.md)

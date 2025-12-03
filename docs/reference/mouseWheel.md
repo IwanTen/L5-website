@@ -1,56 +1,43 @@
 # mouseWheel()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+A function that's called when the mouse wheel moves.
 
-A function that's called once when the mouse wheel moves.
+*Note that the mouse must be over the sketch window to register.*
 
-Declaring the function `mouseWheel()` sets a code block to run
-automatically when the user scrolls with the mouse wheel:
+Declaring the function `mouseWheel()` sets a code block to run automatically when the user scrolls with the mouse wheel:
 
-<pre><code class="language-js">function mouseWheel() {
-  // Code to run.
-}
-`</pre>
-The mouse system variables, such as mouseX and
-mouseY, will be updated with their most recent
-value when `mouseWheel()` is called by p5.js:
+```lua
+function mouseWheel() 
+  -- Code to run
+end
+```
 
-<pre><code class="language-js">function mouseWheel() {
-  if (mouseX < 50) {
-    // Code to run if the mouse is on the left.
-  }
+The mouse system variables, such as mouseX and mouseY, will be updated with their most recent value when `mouseWheel()` is called by L5:
 
-  if (mouseY > 50) {
-    // Code to run if the mouse is near the bottom.
-  }
-}
-`</pre>
-The parameter, `event`, is optional. `mouseWheel()` is always passed a
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/" target="_blank">MouseEvent</a>
-object with properties that describe the mouse scroll event:
+```lua
+function mouseWheel() 
+  if mouseX < 50 then
+    -- Code to run if the mouse is on the left.
+  end
 
-<pre><code class="language-js">function mouseWheel(event) {
-  // Code to run that uses the event.
-  console.log(event);
-}
-`</pre>
-The `event` object has many properties including `delta`, a `Number`
-containing the distance that the user scrolled. For example, `event.delta`
-might have the value 5 when the user scrolls up. `event.delta` is positive
-if the user scrolls up and negative if they scroll down. The signs are
-opposite on macOS with "natural" scrolling enabled.
+  if mouseY > 50 then
+    -- Code to run if the mouse is near the bottom.
+  end
+end
+```
 
-Browsers may have default behaviors attached to various mouse events. For
-example, some browsers highlight text when the user moves the mouse while
-pressing a mouse button. To prevent any default behavior for this event,
-add `return false;` to the end of the function.
+The optional parameter returns `1` for up or `-1` for down. This will be opposite on macOS with "natural" scrolling enabled.
 
-Note: On Safari, `mouseWheel()` may only work as expected if
-`return false;` is added at the end of the function.
+```lua
+function mouseWheel(moveY) 
+  -- Code to run that uses the event.
+  print(moveY)
+end
+```
 
 ## Examples
 
-![mouseWheel example 1](assets/mouseWheel1.webp)
+![mouseWheel example 1](assets/mouseWheel1.gif)
 
 ```lua
 local circleSize = 0
@@ -72,13 +59,69 @@ end
 
 -- Increment circleSize when the user scrolls the mouse wheel.
 function mouseWheel()
-  circleSize += 1
-  -- Uncomment to prevent any default behavior.
-  -- return false
+  circleSize = circleSize + 1
+end
+
+```
+
+![mouseWheel example 2](assets/mouseWheel2.gif)
+
+```lua
+local direction = ''
+
+function setup()
+  size(100, 100)
+
+  describe(
+    'A gray square. An arrow at its center points up when the user scrolls up. The arrow points down when the user scrolls down.'
+  )
+end
+
+function draw()
+  background(200)
+  fill(0)
+
+  -- Style the text.
+  textAlign(CENTER)
+  textSize(16)
+
+  -- Draw an arrow that points where
+  -- the mouse last scrolled.
+  text(direction, 50, 50)
+end
+
+-- Change direction when the user scrolls the mouse wheel.
+function mouseWheel(event)
+  if event > 0 then
+    direction = 'up'
+  else
+    direction = 'down'
+  end
 end
 ```
 
+## Syntax
+
+```lua
+mouseWheel([event])
+```
+
+## Parameters
+
+| Parameter |                                             |
+| -         | --                                          |
+| event     | WheelEvent: optional `wheelEvent` argument. |
+
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [mouseButton](mouseButton.md)
+* [mouseClicked()](mouseClicked.md)
+* [mouseMoved()](mouseMoved.md)
+* [mouseDragged()](mouseDragged.md)
+* [mouseX](mouseX.md)
+* [mouseY](mouseY.md)
+* [movedX](movedX.md)
+* [movedY](movedY.md)
+* [pmouseX](pmouseX.md)
+* [pmouseY](pmouseY.md)

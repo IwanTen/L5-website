@@ -1,61 +1,34 @@
 # mouseReleased()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
 A function that's called once when a mouse button is released.
 
-Declaring the function `mouseReleased()` sets a code block to run
-automatically when the user releases a mouse button after having pressed
-it:
+Declaring the function `mouseReleased()` sets a code block to run automatically when the user releases a mouse button after having pressed it:
 
-<pre><code class="language-js">function mouseReleased() {
-  // Code to run.
-}
-`</pre>
-The mouse system variables, such as mouseX and
-mouseY, will be updated with their most recent
-value when `mouseReleased()` is called by p5.js:
+```lua
+function mouseReleased() 
+  -- Code to run.
+end
+```
 
-<pre><code class="language-js">function mouseReleased() {
-  if (mouseX < 50) {
-    // Code to run if the mouse is on the left.
-  }
+The mouse system variables, such as mouseX and mouseY, will be updated with their most recent value when `mouseReleased()` is called by L5:
 
-  if (mouseY > 50) {
-    // Code to run if the mouse is near the bottom.
-  }
-}
-`</pre>
-The parameter, `event`, is optional. `mouseReleased()` is always passed a
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/" target="_blank">MouseEvent</a>
-object with properties that describe the mouse release event:
+```lua
+function mouseReleased() 
+  if mouseX < 50 then
+    -- Code to run if the mouse is on the left.
+  end
 
-<pre><code class="language-js">function mouseReleased(event) {
-  // Code to run that uses the event.
-  console.log(event);
-}
-`</pre>
-On touchscreen devices, `mouseReleased()` will run when a user’s touch
-ends if touchEnded() isn’t declared. If
-touchEnded() is declared, then
-touchEnded() will run when a user’s touch
-ends and `mouseReleased()` won’t.
+  if mouseY > 50 then
+    -- Code to run if the mouse is near the bottom.
+  end
+end
+```
 
-Browsers may have default behaviors attached to various mouse events. For
-example, some browsers highlight text when the user moves the mouse while
-pressing a mouse button. To prevent any default behavior for this event,
-add `return false;` to the end of the function.
-
-Note: mousePressed(), `mouseReleased()`,
-and mouseClicked() are all related.
-mousePressed() runs as soon as the user
-clicks the mouse. `mouseReleased()` runs as soon as the user releases the
-mouse click. mouseClicked() runs
-immediately after `mouseReleased()`.
+Note: mousePressed(), `mouseReleased()`, and mouseClicked() are all related. mousePressed() runs as soon as the user clicks the mouse. `mouseReleased()` runs as soon as the user releases the mouse click. mouseClicked() runs immediately after `mouseReleased()`.
 
 ## Examples
 
-![mouseReleased example 1](assets/mouseReleased1.webp)
+![mouseReleased example 1](assets/mousePressed1.gif)
 
 ```lua
 local value = 0
@@ -80,18 +53,72 @@ end
 
 function mouseReleased()
   -- Update the grayscale value.
-  value += 5
+  value = value + 5
 
   -- Reset the grayscale value.
-  if (value > 255) 
+  if value > 255 then
     value = 0
   end
-  -- Uncomment to prevent any default behavior.
-  -- return false
 end
+```
+
+![mouseReleased example 2](assets/mouseClicked2.gif)
+
+```lua
+function setup()
+  size(100, 100)
+
+  -- Style the circle.
+  fill('orange')
+  stroke('royalblue')
+  strokeWeight(10)
+
+  describe(
+    'An orange circle with a thick, blue border drawn on a gray background. When the user presses and holds the mouse, the border becomes thin and pink. When the user releases the mouse, the border becomes thicker and changes color to blue.'
+  )
+end
+
+function draw()
+  background(220)
+
+  -- Draw the circle.
+  circle(50, 50, 20)
+end
+
+-- Set the stroke color and weight as soon as the user clicks.
+function mousePressed()
+  stroke('deeppink')
+  strokeWeight(3)
+end
+
+-- Set the stroke and fill colors as soon as the user releases
+-- the mouse.
+function mouseReleased()
+  stroke('royalblue')
+
+  -- This is never visible because fill() is called
+  -- in mouseClicked() which runs immediately after
+  -- mouseReleased()
+  fill('limegreen')
+end
+
+-- Set the fill color and stroke weight after
+-- mousePressed() and mouseReleased() are called.
+function mouseClicked()
+  fill('orange')
+  strokeWeight(10)
+end
+```
+
+## Syntax
+
+```lua
+mouseReleased()
 ```
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [mouseButton](mouseButton.md)
+* [mousePressed()](mousePressed.md)
+* [mouseClicked()](mouseClicked.md)
+* [mouseIsPressed](mouseIsPressed.md)

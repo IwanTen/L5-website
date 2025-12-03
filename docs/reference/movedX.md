@@ -1,20 +1,12 @@
-# movedX()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+# movedX
 
 A `Number` system variable that tracks the mouse's horizontal movement.
 
-`movedX` tracks how many pixels the mouse moves left or right between
-frames. `movedX` will have a negative value if the mouse moves left between
-frames and a positive value if it moves right. `movedX` can be calculated
-as `mouseX - pmouseX`.
-
-Note: `movedX` continues updating even when
-requestPointerLock() is active.
+`movedX` tracks how many pixels the mouse moves left or right between frames. `movedX` will have a negative value if the mouse moves left between frames and a positive value if it moves right. `movedX` can be calculated as `mouseX - pmouseX`.
 
 ## Examples
 
-![movedX example 1](assets/movedX1.webp)
+![movedX example 1](assets/movedX1.gif)
 
 ```lua
 function setup()
@@ -27,6 +19,7 @@ end
 
 function draw()
   background(200)
+  fill(0)
 
   -- Style the text.
   textAlign(CENTER)
@@ -34,15 +27,31 @@ function draw()
 
   -- Display >> when movedX is positive and
   -- << when it's negative.
-  if (movedX > 0) 
+  if movedX > 0 then
     text('>>', 50, 50)
-  end elseif (movedX < 0) 
+  elseif movedX < 0 then
     text('<<', 50, 50)
   end
 end
 ```
 
+## Syntax
+
+```lua
+movedX
+```
+
+## Returns
+
+Number: positive or negative number tracking horizontal movement.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [movedY](movedY.md)
+* [mouseMoved()](mouseMoved.md)
+* [mouseX](mouseX.md)
+* [mouseClicked()](mouseClicked.md)
+* [mouseButton](mouseButton.md)
+
+
+

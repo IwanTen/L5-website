@@ -1,17 +1,12 @@
 # keyIsPressed()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
-A `Boolean` system variable that's `true` if any key is currently pressed
-and `false` if not.
+A boolean variable that's `true` if any key is currently pressed and `false` if not.
 
 ## Examples
 
-![keyIsPressed example 1](assets/keyIsPressed1.webp)
+![keyIsPressed example 1](assets/keyPressed1.gif)
 
 ```lua
--- Click on the canvas to begin detecting key presses.
-
 function setup()
   size(100, 100)
 
@@ -24,9 +19,9 @@ function draw()
   background(200)
 
   -- Style the square.
-  if (keyIsPressed == true) 
+  if keyIsPressed == true then
     fill(0)
-  end else 
+  else 
     fill(255)
   end
 
@@ -35,7 +30,66 @@ function draw()
 end
 ```
 
+![keyIsPressed example 2](assets/keyPressed1.gif)
+
+```lua
+function setup()
+  size(100, 100)
+
+  describe(
+    'A gray square with a white square at its center. The white square turns black when the user presses a key.'
+  )
+end
+
+function draw()
+  background(200)
+
+  -- Style the square.
+  if keyIsPressed then
+    fill(0)
+  else 
+    fill(255)
+  end
+
+  -- Draw the square.
+  square(25, 25, 50)
+end
+```
+
+![keyIsPressed example 3](assets/keyIsPressed3.gif)
+
+```lua
+function setup()
+  size(100, 100)
+
+  describe(
+    'A gray square with the word "false" at its center. The word switches to "true" when the user presses a key.'
+  )
+end
+
+function draw()
+  background(200)
+  fill(0)
+
+  -- Style the text.
+  textAlign(CENTER)
+  textSize(16)
+
+  -- Display the value of keyIsPressed.
+  text(keyIsPressed, 50, 50)
+end
+```
+
+## Syntax
+
+```lua
+keyIsPressed
+```
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [key](key.md)
+* [keyPressed()](keyPressed.md)
+* [keyReleased()](keyReleased.md)
+* [keyIsDown()](keyIsDown.md)
+* [keyTyped()](keyTyped.md)

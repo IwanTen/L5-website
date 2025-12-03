@@ -1,23 +1,12 @@
 # mouseX()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A `Number` system variable that tracks the mouse's horizontal position.
 
-In 2D mode, `mouseX` keeps track of the mouse's position relative to the
-top-left corner of the canvas. For example, if the mouse is 50 pixels from
-the left edge of the canvas, then `mouseX` will be 50.
-
-In WebGL mode, `mouseX` keeps track of the mouse's position relative to the
-center of the canvas. For example, if the mouse is 50 pixels to the right
-of the canvas' center, then `mouseX` will be 50.
-
-If touch is used instead of the mouse, then `mouseX` will hold the
-x-coordinate of the most recent touch point.
+`mouseX` keeps track of the mouse's position relative to the top-left corner of the canvas. For example, if the mouse is 50 pixels from the left edge of the canvas, then `mouseX` will be 50.
 
 ## Examples
 
-![mouseX example 1](assets/mouseX1.webp)
+![mouseX example 1](assets/mouseX1.gif)
 
 ```lua
 function setup()
@@ -34,7 +23,43 @@ function draw()
 end
 ```
 
+![mouseX example 2](assets/mouseX2.gif)
+
+```lua
+function setup()
+  size(100, 100)
+
+  describe("A gray square. The mouse's x- and y-coordinates are displayed as the user moves the mouse.")
+end
+
+function draw()
+  background(200)
+  fill(0)
+
+  -- Style the text.
+  textAlign(CENTER)
+  textSize(16)
+
+  -- Display the mouse's coordinates.
+  text('x: '..mouseX..' y:'..mouseY, 50, 50)
+end
+```
+
+## Syntax
+
+```lua
+mouseX
+```
+
+## Returns
+
+Number: Current x-coordinate of mouse.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [mouseButton](mouseButton.md)
+* [mouseY](mouseY.md)
+* [movedX](movedX.md)
+* [movedY](movedY.md)
+* [pmouseX](pmouseX.md)
+* [pmouseY](pmouseY.md)

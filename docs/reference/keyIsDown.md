@@ -1,29 +1,21 @@
 # keyIsDown()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Returns `true` if the key it’s checking is pressed and `false` if not.
 
-`keyIsDown()` is helpful when checking for multiple different key presses.
-For example, `keyIsDown()` can be used to check if both `LEFT_ARROW` and
-`UP_ARROW` are pressed:
+`keyIsDown()` is helpful when checking for multiple different key presses. For example, `keyIsDown()` can be used to check if both `left` arrow and
+`up` arrow are pressed:
 
-<pre><code class="language-js">if (keyIsDown(LEFT_ARROW) && keyIsDown(UP_ARROW)) {
-  // Move diagonally.
-}
-`</pre>
-`keyIsDown()` can check for key presses using
-keyCode values, as in `keyIsDown(37)` or
-`keyIsDown(LEFT_ARROW)`. Key codes can be found on websites such as
-<a href="https://keycode.info" target="_blank">keycode.info</a>.
+```lua
+if keyIsDown('left') and keyIsDown('up') then
+  print('move diagonally')
+end
+```
 
 ## Examples
 
-![keyIsDown example 1](assets/keyIsDown1.webp)
+![keyIsDown example 1](assets/keyIsDown1.gif)
 
 ```lua
--- Click on the canvas to begin detecting key presses.
-
 local x = 50
 local y = 50
 
@@ -39,20 +31,20 @@ end
 
 function draw()
   -- Update x and y if an arrow key is pressed.
-  if (keyIsDown(LEFT_ARROW) == true) 
-    x -= 1
+  if keyIsDown('left') == true then
+    x = x - 1
   end
 
-  if (keyIsDown(RIGHT_ARROW) == true) 
-    x += 1
+  if keyIsDown('right') == true then
+    x = x + 1
   end
 
-  if (keyIsDown(UP_ARROW) == true) 
-    y -= 1
+  if keyIsDown('up') == true then
+    y = y - 1
   end
 
-  if (keyIsDown(DOWN_ARROW) == true) 
-    y += 1
+  if keyIsDown('down') == true then
+    y = y + 1
   end
 
   -- Style the circle.
@@ -61,9 +53,26 @@ function draw()
   -- Draw the circle.
   circle(x, y, 5)
 end
+
 ```
+
+## Syntax
+
+```lua
+keyIsDown(keyname)
+```
+
+## Parameters
+
+| Parameter |                                      |
+| -         | --                                   |
+| keyname   | String: keyname in quotes.           |
+
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [key](key.md)
+* [keyPressed()](keyPressed.md)
+* [keyReleased()](keyReleased.md)
+* [keyIsPressed](keyIsPressed.md)
+* [keyTyped()](keyTyped.md)

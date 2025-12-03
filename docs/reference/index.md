@@ -204,7 +204,6 @@
 ### Keyboard
 
 * [key](key.md)
-* <s>[keyCode](#)</s>
 * [keyIsDown()](keyIsDown.md)
 * [keyIsPressed()](keyIsPressed.md)
 * [keyPressed()](keyPressed.md)
@@ -213,7 +212,6 @@
 
 ### Mouse
 
-* <s>[doubleClicked()](#)</s>
 * [mouseButton](mouseButton.md)
 * [mouseClicked()](mouseClicked.md)
 * [mouseDragged()](mouseDragged.md)

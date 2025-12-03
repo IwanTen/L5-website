@@ -1,50 +1,34 @@
 # keyReleased()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A function that's called once when any key is released.
 
-Declaring the function `keyReleased()` sets a code block to run once
-automatically when the user releases any key:
+Declaring the function `keyReleased()` sets a code block to run once automatically when the user releases any key:
 
-<pre><code class="language-js">function keyReleased() {
-  // Code to run.
-}
-`</pre>
-The key and keyCode
-variables will be updated with the most recently released value when
-`keyReleased()` is called by p5.js:
+```lua
+function keyReleased() 
+  -- Code to run.
+end
+```
 
-<pre><code class="language-js">function keyReleased() {
-  if (key === 'c') {
-    // Code to run.
-  }
+The key variables will be updated with the most recently released value when `keyReleased()` is called by L5:
 
-  if (keyCode === ENTER) {
-    // Code to run.
-  }
-}
-`</pre>
-The parameter, `event`, is optional. `keyReleased()` is always passed a
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/" target="_blank">KeyboardEvent</a>
-object with properties that describe the key press event:
+```lua
+function keyReleased() 
+  if key == 'c' then
+    -- Code to run.
+  end
 
-<pre><code class="language-js">function keyReleased(event) {
-  // Code to run that uses the event.
-  console.log(event);
-}
-`</pre>
-Browsers may have default behaviors attached to various key events. To
-prevent any default behavior for this event, add `return false;` to the end
-of the function.
+  if key == 'return' then
+    -- Code to run.
+  end
+end
+```
 
 ## Examples
 
-![keyReleased example 1](assets/keyReleased1.webp)
+![keyReleased example 1](assets/keyPressed1.gif)
 
 ```lua
--- Click on the canvas to begin detecting key presses.
-
 local value = 0
 
 function setup()
@@ -67,17 +51,88 @@ end
 
 -- Toggle value when the user releases a key.
 function keyReleased()
-  if (value == 0) 
+  if value == 0 then
     value = 255
-  end else 
+  else 
     value = 0
   end
-  -- Uncomment to prevent any default behavior.
-  -- return false
 end
+```
+
+![keyReleased example 2](assets/keyReleased2.gif)
+
+```lua
+local value = 0
+
+function setup()
+  size(100, 100)
+
+  describe(
+    'A gray square with a black square at its center. The inner square becomes white when the user releases the "w" key.'
+  )
+end
+
+function draw()
+  background(200)
+
+  -- Style the square.
+  fill(value)
+
+  -- Draw the square.
+  square(25, 25, 50)
+end
+
+-- Set value to 255 the user releases the 'w' key.
+function keyReleased()
+  if key == 'w' then
+    value = 255
+  end
+end
+```
+
+![keyRelease example 3](assets/keyReleased2.gif)
+
+```lua
+local value = 0
+
+function setup()
+  size(100, 100)
+
+  describe(
+    'A gray square with a black square at its center. The inner square turns white when the user presses and releases the left arrow key. It turns black when the user presses and releases the right arrow key.'
+  )
+end
+
+function draw()
+  background(200)
+
+  -- Style the square.
+  fill(value)
+
+  -- Draw the square.
+  square(25, 25, 50)
+end
+
+-- Toggle the background color when the user releases an arrow key.
+function keyReleased()
+  if key == 'left' then
+    value = 255
+  elseif key == 'right' then
+    value = 0
+  end
+end
+```
+
+## Syntax
+
+```lua
+keyReleased()
 ```
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [key](key.md)
+* [keyPressed()](keyPressed.md)
+* [keyIsDown()](keyIsDown.md)
+* [keyIsPressed](keyIsPressed.md)
+* [keyTyped()](keyTyped.md)

@@ -1,51 +1,34 @@
 # keyPressed()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A function that's called once when any key is pressed.
 
-Declaring the function `keyPressed()` sets a code block to run once
-automatically when the user presses any key:
+Declaring the function `keyPressed()` sets a code block to run once automatically when the user presses any key:
 
-<pre><code class="language-js">function keyPressed() {
-  // Code to run.
-}
-`</pre>
-The key and keyCode
-variables will be updated with the most recently typed value when
-`keyPressed()` is called by p5.js:
+```lua
+function keyPressed()
+  -- Code to run
+end
+```
 
-<pre><code class="language-js">function keyPressed() {
-  if (key === 'c') {
-    // Code to run.
-  }
+The key variable will be updated with the most recently typed value when `keyPressed()` is called by L5:
 
-  if (keyCode === ENTER) {
-    // Code to run.
-  }
-}
-`</pre>
-The parameter, `event`, is optional. `keyPressed()` is always passed a
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/" target="_blank">KeyboardEvent</a>
-object with properties that describe the key press event:
+```lua
+function keyPressed() 
+  if key == 'c' then
+    -- Code to run.
+  end
 
-<pre><code class="language-js">function keyPressed(event) {
-  // Code to run that uses the event.
-  console.log(event);
-}
-`</pre>
-Browsers may have default behaviors attached to various key events. For
-example, some browsers may jump to the bottom of a web page when the
-`SPACE` key is pressed. To prevent any default behavior for this event, add
-`return false;` to the end of the function.
+  if key == 'return' then
+    -- Code to run.
+  end
+end
+```
 
 ## Examples
 
-![keyPressed example 1](assets/keyPressed1.webp)
+![keyPressed example 1](assets/keyPressed1.gif)
 
 ```lua
--- Click on the canvas to begin detecting key presses.
-
 local value = 0
 
 function setup()
@@ -68,17 +51,91 @@ end
 
 -- Toggle the background color when the user presses a key.
 function keyPressed()
-  if (value == 0) 
+  if value == 0 then
     value = 255
-  end else 
+  else 
     value = 0
   end
-  -- Uncomment to prevent any default behavior.
-  -- return false
 end
+```
+
+![keyPressed example 2](assets/keyPressed1.gif)
+
+```lua
+local value = 0
+
+function setup()
+  size(100, 100)
+
+  describe(
+    'A gray square with a white square at its center. The inner square turns black when the user presses the "b" key. It turns white when the user presses the "a" key.'
+  )
+end
+
+function draw()
+  background(200)
+
+  -- Style the square.
+  fill(value)
+
+  -- Draw the square.
+  square(25, 25, 50)
+end
+
+-- Reassign value when the user presses the 'a' or 'b' key.
+function keyPressed()
+  if key == 'a' then
+    value = 255
+  elseif key == 'b' then
+    value = 0
+  end
+end
+```
+
+![keyPressed example 3](assets/keyPressed1.gif)
+
+```lua
+local value = 0
+
+function setup()
+  size(100, 100)
+
+  describe(
+    'A gray square with a black square at its center. The inner square turns white when the user presses the left arrow key. It turns black when the user presses the right arrow key.'
+  )
+end
+
+function draw()
+  background(200)
+
+  -- Style the square.
+  fill(value)
+
+  -- Draw the square.
+  square(25, 25, 50)
+end
+
+-- Toggle the background color when the user presses an arrow key.
+function keyPressed()
+  if key == 'left' then
+    value = 255
+  elseif key == 'right' then
+    value = 0
+  end
+end
+```
+
+## Syntax
+
+```lua
+keyPressed()
 ```
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [key](key.md)
+* [keyIsDown()](keyIsDown.md)
+* [keyReleased()](keyReleased.md)
+* [keyIsPressed](keyIsPressed.md)
+* [keyTyped()](keyTyped.md)
+

@@ -1,29 +1,12 @@
 # pmouseY()
- 
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
 
-A `Number` system variable that tracks the mouse's previous vertical
-position.
+A `Number` system variable that tracks the mouse's previous vertical position.
 
-In 2D mode, `pmouseY` keeps track of the mouse's position relative to the
-top-left corner of the canvas. Its value is
-mouseY from the previous frame. For example, if
-the mouse was 50 pixels from the top edge of the canvas during the last
-frame, then `pmouseY` will be 50.
-
-In WebGL mode, `pmouseY` keeps track of the mouse's position relative to the
-center of the canvas. For example, if the mouse was 50 pixels below the
-canvas' center during the last frame, then `pmouseY` will be 50.
-
-If touch is used instead of the mouse, then `pmouseY` will hold the
-y-coordinate of the last touch point.
-
-Note: `pmouseY` is reset to the current mouseY
-value at the start of each touch event.
+`pmouseY` keeps track of the mouse's position relative to the top-left corner of the canvas. Its value is mouseY from the previous frame. For example, if the mouse was 50 pixels from the top edge of the canvas during the last frame, then `pmouseY` will be 50.
 
 ## Examples
 
-![pmouseY example 1](assets/pmouseY1.webp)
+![pmouseY example 1](assets/pmouseX1.gif)
 
 ```lua
 function setup()
@@ -42,7 +25,22 @@ function draw()
 end
 ```
 
+## Syntax
+
+```lua
+pmouseY
+```
+
+## Returns
+
+Number: y-coordinate of mouse from previous frame.
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [pmouseX](pmouseX.md)
+* [mouseButton](mouseButton.md)
+* [movedX](movedX.md)
+* [movedY](movedY.md)
+* [mouseX](mouseX.md)
+* [mouseY](mouseY.md)
+

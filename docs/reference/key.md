@@ -1,24 +1,18 @@
 # key()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A `String` system variable that contains the value of the last key typed.
 
-The key variable is helpful for checking whether an
-<a href="https://en.wikipedia.org/wiki/ASCII#Printable_characters" target="_blank">ASCII</a>
-key has been typed. For example, the expression `key === "a"` evaluates to
-`true` if the `a` key was typed and `false` if not. `key` doesn’t update
-for special keys such as `LEFT_ARROW` and `ENTER`. Use keyCode instead for
-special keys. The keyIsDown() function should
-be used to check for multiple different key presses at the same time.
+The key variable is helpful for checking whether a key has been typed. For example, the expression `key == 'a'` evaluates to `true` if the `a` key was typed and `false` if not. 
+
+**Unlike p5.js and Processing, `key` *does* update for special keys such as `left` (left arrow), `return` (Enter key), `lshift` (left shift key), function keys, etc.**
+
+The keyIsDown() function should be used to check for multiple different key presses at the same time.
 
 ## Examples
 
-![key example 1](assets/key1.webp)
+![key example 1](assets/key1.gif)
 
 ```lua
--- Click on the canvas to begin detecting key presses.
-
 function setup()
   size(100, 100)
 
@@ -29,6 +23,7 @@ end
 
 function draw()
   background(200)
+  fill(0)
 
   -- Style the text.
   textAlign(CENTER)
@@ -39,7 +34,48 @@ function draw()
 end
 ```
 
+![key example 2](assets/key2.gif)
+
+```lua
+local x = 50
+local y = 50
+
+function setup()
+  size(100, 100)
+
+  background(200)
+
+  describe(
+    'A gray square with a black circle at its center. The circle moves when the user presses the keys "w", "a", "s", or "d". It leaves a trail as it moves.'
+  )
+end
+
+function draw()
+  -- Update x and y if a key is pressed.
+  if keyIsPressed == true then
+    if key == 'w' then
+      y = y - 1
+    elseif key == 's' then
+      y = y + 1
+    elseif key == 'a' then
+      x = x - 1
+    elseif key == 'd' then
+      x = x + 1
+    end
+  end
+
+  -- Style the circle.
+  fill(0)
+
+  -- Draw the circle at (x, y).
+  circle(x, y, 5)
+end
+```
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [keyPressed()](keyPressed.md)
+* [keyIsPressed](keyIsPressed.md)
+* [keyReleased()](keyReleased.md)
+* [keyIsDown()](keyIsDown.md)
+* [keyTyped()](keyTyped.md)

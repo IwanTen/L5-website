@@ -1,32 +1,28 @@
-# mouseButton()
+# mouseButton
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+A String system variable that contains the value of the last mouse button pressed.
 
-A String system variable that contains the value of the last mouse button
-pressed.
+The `mouseButton` variable is either `LEFT`, `RIGHT`, or `CENTER`, depending on which button was pressed last.
 
-The `mouseButton` variable is either `LEFT`, `RIGHT`, or `CENTER`,
-depending on which button was pressed last.
-
-Note: Different browsers may track `mouseButton` differently. See
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/buttons/" target="_blank">MDN</a>
-for more information.
+*Note that the mouse must be pressed on the window to be detected and reported.*
 
 ## Examples
 
 ![mouseButton example 1](assets/mouseButton1.webp)
 
 ```lua
+-- Click on the window to detect the mouseButton
 function setup()
   size(100, 100)
 
   describe(
-    'A gray square with black text at its center. The text changes from 0 to either "left" or "right" when the user clicks a mouse button.'
+    'A gray square. Black text appears and changes to either "left" or "right" when the user clicks a mouse button on the window.'
   )
 end
 
 function draw()
   background(200)
+  fill(0)
 
   -- Style the text.
   textAlign(CENTER)
@@ -37,7 +33,47 @@ function draw()
 end
 ```
 
+![mouseButton example 2](assets/mouseButton2.gif)
+
+```lua
+function setup() 
+  size(100, 100)
+
+  describe(
+    "A gray square. Different shapes appear at its center depending on the mouse button that's clicked."
+  )
+end
+
+function draw() 
+  background(200)
+
+  if mouseIsPressed == true  then
+    if mouseButton == LEFT then
+      circle(50, 50, 50)
+    end
+    if mouseButton == RIGHT then
+      square(25, 25, 50)
+    end
+    if mouseButton == CENTER then
+      triangle(23, 75, 50, 20, 78, 75)
+    end
+  end
+end
+```
+
+## Syntax
+
+```lua
+mouseButton
+```
+
+## Returns
+
+STRING: Either, LEFT ('left'), CENTER ('center') or RIGHT ('right')
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [mouseClicked()](mouseClicked.md)
+* [mouseMoved()](mouseMoved.md)
+* [mousePressed()](mousePressed.md)
+* [mouseReleased()](mouseReleased.md)

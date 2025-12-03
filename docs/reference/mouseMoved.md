@@ -1,48 +1,32 @@
 # mouseMoved()
  
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 A function that's called when the mouse moves.
 
-Declaring the function `mouseMoved()` sets a code block to run
-automatically when the user moves the mouse without clicking any mouse
-buttons:
+Declaring the function `mouseMoved()` sets a code block to run automatically when the user moves the mouse without clicking any mouse buttons:
 
-<pre><code class="language-js">function mouseMoved() {
-  // Code to run.
-}
-`</pre>
-The mouse system variables, such as mouseX and
-mouseY, will be updated with their most recent
-value when `mouseMoved()` is called by p5.js:
+```lua
+function mouseMoved() 
+  -- Code to run.
+end
+```
 
-<pre><code class="language-js">function mouseMoved() {
-  if (mouseX < 50) {
-    // Code to run if the mouse is on the left.
-  }
+The mouse system variables, such as mouseX and mouseY, will be updated with their most recent value when `mouseMoved()` is called by L5:
 
-  if (mouseY > 50) {
-    // Code to run if the mouse is near the bottom.
-  }
-}
-`</pre>
-The parameter, `event`, is optional. `mouseMoved()` is always passed a
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/" target="_blank">MouseEvent</a>
-object with properties that describe the mouse move event:
+```
+function mouseMoved() 
+  if mouseX < 50 then
+    -- Code to run if the mouse is on the left.
+  end
 
-<pre><code class="language-js">function mouseMoved(event) {
-  // Code to run that uses the event.
-  console.log(event);
-}
-`</pre>
-Browsers may have default behaviors attached to various mouse events. For
-example, some browsers highlight text when the user moves the mouse while
-pressing a mouse button. To prevent any default behavior for this event,
-add `return false;` to the end of the function.
+  if mouseY > 50 then
+    -- Code to run if the mouse is near the bottom.
+  end
+end
+```
 
 ## Examples
 
-![mouseMoved example 1](assets/mouseMoved1.webp)
+![mouseMoved example 1](assets/mouseDragged1.gif)
 
 ```lua
 local value = 0
@@ -67,18 +51,30 @@ end
 
 function mouseMoved()
   -- Update the grayscale value.
-  value += 5
+  value = value + 5
 
   -- Reset the grayscale value.
-  if (value > 255) 
+  if value > 255 then
     value = 0
   end
-  -- Uncomment to prevent any default behavior.
-  -- return false
 end
+```
+
+## Syntax
+
+```lua
+mouseMoved()
 ```
 
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [mouseButton](mouseButton.md)
+* [mouseWheel()](mouseWheel.md)
+* [mouseClicked()](mouseClicked.md)
+* [mouseDragged()](mouseDragged.md)
+* [mouseX](mouseX.md)
+* [mouseY](mouseY.md)
+* [movedX](movedX.md)
+* [movedY](movedY.md)
+* [pmouseX](pmouseX.md)
+* [pmouseY](pmouseY.md)
