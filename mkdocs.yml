@@ -36,6 +36,7 @@ nav:
     - Structure: reference/#structure
     - Constants: reference/#constants
     - Foundation: reference/#foundation
+  - Tutorials: tutorials/index.md
   - Bug Reports: bug-reports.md
   - Contributing: contributing.md
   - For developers: how.md
