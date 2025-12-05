@@ -1,10 +1,8 @@
-# local()
+# local
     
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
-
 Declares a new variable in the current block scope.
 
-A variable is a container for a value. For example, a variable might contain a creature's x-coordinate as a `Number` or its name as a `String`. Variables can change value by reassigning them as follows:
+A variable is a container for a value. For example, a variable might contain a creature's x-coordinate as a `number` or its name as a `string`. Variables can change value by reassigning them as follows:
 
 ```lua
 local x = 10
@@ -13,7 +11,7 @@ local x = 10
 x = 50
 ```
 
-Variables have block scope. When a variable is declared it only exists within the block defined by its start and closing `end`. For example, the following code would print an output of `nil` because `x` is declared as a local variable within the `setup()` function's block:
+**Note: Unlike JavaScript and Java, when a variable is declared without prepending `local` such as `x = 10` it is global by default, *even when declared inside a function.* In contrast, declaring a variable with `local` means it only exists within the block defined by its start and closing `end`.** For example, the following code would print an output of `nil` because `x` is declared as a local variable within the `setup()` function's block:
 
 ```lua
 function setup() 
@@ -72,9 +70,32 @@ function setup()
   text(message, 50, 50)
 
   describe('The text "Hello, L5!" written on a gray background.')
-end```
+end
+```
+
+![local example 2](assets/local2.gif)
+
+```lua
+local x = 0
+
+function setup()
+  size(100, 100)
+
+  describe('A white circle moves from left to right against a gray background.')
+end
+
+function draw()
+  background(220)
+
+  -- Change the value of x.
+  x = x + 1
+
+  circle(x, 50, 20)
+end
+```
 
 ## Related
 
-* [if()](if.md)
-* [function()](function.md)
+* [if](if.md)
+* [function](function.md)
+* [for](for.md)

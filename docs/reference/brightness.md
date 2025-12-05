@@ -20,7 +20,7 @@ function setup()
   -- Use HSB color.
   colorMode(HSB)
 
-  -- Create a p5.Color object.
+  -- Create a color object.
   local c = color(0, 50, 100)
 
   -- Draw the left rectangle.
@@ -80,7 +80,7 @@ function setup()
   -- Use HSB color with values in the range 0-255.
   colorMode(HSB, 255)
 
-  -- Create a p5.Color object.
+  -- Create a color object.
   local c = color(0, 127, 255)
 
   -- Draw the left rectangle.

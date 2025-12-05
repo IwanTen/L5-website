@@ -4,7 +4,7 @@ Displays text in the command line console.
 
 `print()` is helpful for printing values while debugging. Each call to `print()` creates a new line of text.
 
-Note: Call `print('\n')` to print a blank line. 
+Note: Call `print()` to print a blank line. 
 
 ## Examples
 
@@ -32,5 +32,7 @@ print(contents)
 
 ## Related
 
+* [cursor()](cursor.md)
+* [deltaTime](deltaTime.md)
 * [describe()](describe.md)
 * [text()](text.md)

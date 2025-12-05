@@ -78,7 +78,9 @@
 * [image()](image.md)
 * [imageMode()](imageMode.md)
 * [loadImage()](loadImage.md)
+* [loadVideo()](loadVideo.md)
 * [noTint()](noTint.md)
+* [play()](play.md)
 * [tint()](tint.md)
 
 ### Pixels
@@ -254,13 +256,16 @@
 
 ## Constants
 
-* [DEGREES()](degrees.md)
-* [HALF_PI](half_pi.md)
-* [HSB](hsb.md)
-* [PI](pi.md)
-* [RADIANS()](radians.md)
-* [TAU](tau.md)
-* [TWO_PI](two_pi.md)
+* [DEGREES](DEGREES.md)
+* [HALF_PI](HALF_PI.md)
+* [HSB](HSB.md)
+* [HSL](HSL.md)
+* [PI](PI.md)
+* [QUARTER_PI](QUARTER_PI.md)
+* [RADIANS](RADIANS.md)
+* [TAU](TAU.md)
+* [TWO_PI](TWO_PI.md)
+* [VERSION](VERSION.md)
 
 ## Foundation
 
@@ -269,6 +274,6 @@
 * [if](if.md)
 * [local](local.md)
 * [Table](table.md)
-* [Boolean](boolean.md)
-* <s>[Number](#)</s>
-* <s>[while](#)</s>
+* [Boolean](Boolean.md)
+* [Number](Number.md)
+* [while](while.md)

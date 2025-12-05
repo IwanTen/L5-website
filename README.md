@@ -1,10 +1,14 @@
 # L5 website
 
+Documentation site for [L5](https://github.com/L5lua/L5), the Processing-like creative coding library in Lua.
+
+Visit the site at [L5lua.org](https://l5lua.org).
+
 ## TODO
 
-* [ ] Finish editing all reference pages and adding screenshots
+* [X] Finish editing all reference pages and adding screenshots
 * [ ] Add tutorial and example pages
-* [ ] Add information on being listed as a contributor
+* [ ] Add information on contributions and being listed as a contributor
 
 ## How to Contribute
 

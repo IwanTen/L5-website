@@ -73,7 +73,7 @@ function setup()
   -- Use RGB color with values in the range 0-100.
   colorMode(RGB, 100)
 
-  -- Create a p5.Color object.
+  -- Create a color object.
   local c = color(69, 39, 86)
 
   -- Draw the left rectangle.

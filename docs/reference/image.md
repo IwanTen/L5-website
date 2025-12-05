@@ -65,13 +65,13 @@ image(img, x, y, [width], [height])
 
 ## Parameters
 
-| Parameter | |
-| - | -- |
-| img | p5.Image|p5.Element|p5.Texture|p5.Framebuffer|p5.FramebufferTexture: image to display. |
-| x | Number: x-coordinate of the top-left corner of the image. |
-| y | Number: y-coordinate of the top-left corner of the image. |
-| width | Number: width to draw the image. |
-| height | Number: height to draw the image. |
+| Parameter |                                                           |
+| -         | --                                                        |
+| img       | image to display.                                         |
+| x         | Number: x-coordinate of the top-left corner of the image. |
+| y         | Number: y-coordinate of the top-left corner of the image. |
+| width     | Number: width to draw the image.                          |
+| height    | Number: height to draw the image.                         |
 
 ## Related
 

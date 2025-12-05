@@ -2,13 +2,9 @@
 
 Gets the lightness value of a color.
 
-`lightness()` extracts the HSL lightness value from a
-p5.Color object, an array of color components, or
-a CSS color string.
+`lightness()` extracts the HSL lightness value from a color object, an array of color components, or a CSS color string.
 
-By default, `lightness()` returns a color's HSL lightness in the range 0
-to 100. If the colorMode() is set to HSL, it
-returns the lightness value in the given range.
+By default, `lightness()` returns a color's HSL lightness in the range 0 to 100. If the colorMode() is set to HSL, it returns the lightness value in the given range.
 
 ## Examples
 
@@ -23,7 +19,7 @@ function setup()
   -- Use HSL color.
   colorMode(HSL)
 
-  -- Create a p5.Color object using HSL values.
+  -- Create a color object using HSL values.
   local c = color(0, 100, 75)
 
   -- Draw the left rectangle.

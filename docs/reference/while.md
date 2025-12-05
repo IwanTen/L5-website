@@ -5,7 +5,8 @@ A way to repeat a block of code.
 `while` loops are helpful for repeating statements while a condition is `true`. They're like `if` statements that repeat. For example, a `while` loop makes it easy to express the idea "draw several lines" like so:
 
 ```lua
-x = 10
+-- Declare a variable to keep track of iteration
+local x = 10
 
 -- Repeat as long as x < 100
 while x < 100 do
@@ -16,42 +17,37 @@ while x < 100 do
 end
 ```
 
-The loop's header begins with the keyword `while`. Loops generally count up
-or count down as they repeat, or iterate. The statement in parentheses
-`x < 100` is a condition the loop checks each time it iterates. If the
-condition is `true`, the loop runs the code between the curly braces `{}`,
-The code between the curly braces is called the loop's body. If the
-condition is `false`, the body is skipped and the loop is stopped.
+The loop's header begins with the keyword `while`. Loops generally count up or count down as they repeat, or iterate. The statement in parentheses `x < 100` is a condition the loop checks each time it iterates. If the condition is `true`, the loop runs the code between the `do` and `end`. The code between these is called the loop's body. If the condition is `false`, the body is skipped and the loop is stopped.
 
-It's common to create infinite loops accidentally. For example, the
-following loop never stops iterating because it doesn't count up:
+It's common to create infinite loops accidentally. For example, the following loop never stops iterating because it doesn't count up (*warning: it could also crash your computer!*):
 
-<pre><code class="language-js">// Declare a variable to keep track of iteration.
-let x = 10;
+```lua
+-- Declare a variable to keep track of iteration.
+-- Running this code could crash your computer
+local x = 10
 
-// Repeat as long as x < 100
-while (x < 100) {
-  line(x, 25, x, 75);
-}
+-- Repeat as long as x < 100
+while x < 100 do 
+  line(x, 25, x, 75)
+end
 
-// This should be in the loop's body!
-x += 20;
-`</pre>
-The statement `x += 20` appears after the loop's body. That means the
-variable `x` is stuck at `10`,  which is always less than `100`.
+-- This should be in the loop's body!
+x = x + 20
+```
 
-`while` loops are useful when the number of iterations isn't known in
-advance. For example, concentric circles could be drawn at random
-increments:
+The statement `x = x + 20` appears after the loop's body. That means the variable `x` is stuck at `10`,  which is always less than `100`.
 
-<pre><code class="language-js">let d = 100;
-let minSize = 5;
+`while` loops are useful when the number of iterations isn't known in advance. For example, concentric circles could be drawn at random increments:
 
-while (d > minSize) {
-  circle(50, 50, d);
-  d -= random(10);
-}
-`</pre>
+```lua
+local d = 100
+local minSize = 5
+
+while d > minSize do
+  circle(50, 50, d)
+  d = d - random(10)
+end
+```
 
 ## Examples
 
@@ -83,4 +79,5 @@ end
 ## Related
 
 * [for](for.md)
+* [function](function.md)
 * [if](if.md)

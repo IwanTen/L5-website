@@ -1,4 +1,4 @@
-# createVideo()
+# :play()
 
 Plays a movie one time and stops at the last frame.
 
@@ -30,9 +30,10 @@ end
 ## Syntax
 
 ```lua
-:play()
+videofile:play()
 ```
 
 ## Related
 
 * [loadVideo()](loadVideo.md)
+* [image()](image.md)

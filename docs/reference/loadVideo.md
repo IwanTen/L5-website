@@ -1,4 +1,4 @@
-# createVideo()
+# loadVideo()
 
 Loads and returns a video file for simple audio/video playback.
 

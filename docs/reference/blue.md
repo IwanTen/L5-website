@@ -2,13 +2,9 @@
 
 Gets the blue value of a color.
 
-`blue()` extracts the blue value from a
-p5.Color object, an array of color components, or
-a CSS color string.
+`blue()` extracts the blue value from a color object, an array of color components, or a CSS color string.
 
-By default, `blue()` returns a color's blue value in the range 0
-to 255. If the colorMode() is set to RGB, it
-returns the blue value in the given range.
+By default, `blue()` returns a color's blue value in the range 0 to 255. If the colorMode() is set to RGB, it returns the blue value in the given range.
 
 ## Examples
 
@@ -47,7 +43,7 @@ function setup()
 
   background(200)
 
-  -- Create a p5.Color object using RGB values.
+  -- Create a color object using RGB values.
   local c = {175, 100, 220}
 
   -- Draw the left rectangle.
@@ -77,7 +73,7 @@ function setup()
   -- Use RGB color with values in the range 0-100.
   colorMode(RGB, 100)
 
-  -- Create a p5.Color object using RGB values.
+  -- Create a color object using RGB values.
   local c = color(69, 39, 86)
 
   -- Draw the left rectangle.

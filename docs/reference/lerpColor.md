@@ -16,7 +16,7 @@ function setup()
 
   background(200)
 
-  -- Create p5.Color objects to interpolate between.
+  -- Create color objects to interpolate between.
   local from = color(218, 165, 32)
   local to = color(72, 61, 139)
 

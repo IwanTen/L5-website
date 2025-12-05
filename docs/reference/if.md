@@ -2,99 +2,87 @@
 
 A way to choose whether to run a block of code.
 
-`if` statements are helpful for running a block of code based on a
-condition. For example, an `if` statement makes it easy to express the
-idea "Draw a circle if the mouse is pressed.":
+`if` statements are helpful for running a block of code based on a condition. For example, an `if` statement makes it easy to express the idea "Draw a circle if the mouse is pressed.":
 
-<pre><code class="language-js">if (mouseIsPressed === true) {
-  circle(mouseX, mouseY, 20);
-}
-`</pre>
-The statement header begins with the keyword `if`. The expression in
-parentheses `mouseIsPressed === true` is a `Boolean` expression that's
-either `true` or `false`. The code between the curly braces `{}` is the if
-statement's body. The body only runs if the `Boolean` expression is `true`.
+```lua
+if mouseIsPressed == true then
+  circle(mouseX, mouseY, 20)
+end
+```
 
-The mouseIsPressed system variable is
-always `true` or `false`, so the code snippet above could also be written
-as follows:
+The statement header begins with the keyword `if`. The expression in parentheses `mouseIsPressed == true` is a `Boolean` expression that's either `true` or `false`. The code between `then` and `end` is the if statement's body. The body only runs if the `Boolean` expression is `true`.
 
-<pre><code class="language-js">if (mouseIsPressed) {
-  circle(mouseX, mouseY, 20);
-}
-`</pre>
-An `if`-`else` statement adds a block of code that runs if the `Boolean`
-expression is `false`. For example, here's an `if`-`else` statement that
-expresses the idea "Draw a circle if the mouse is pressed. Otherwise,
-display a message.":
+The mouseIsPressed system variable is always `true` or `false`, so the code snippet above could also be written as follows:
 
-<pre><code class="language-js">if (mouseIsPressed === true) {
-  // When true.
-  circle(mouseX, mouseY, 20);
-} else {
-  // When false.
-  text('Click me!', 50, 50);
-}
-`</pre>
-There are two possible paths, or branches, in this code snippet. The
-program must follow one branch or the other.
+```lua
+if mouseIsPressed then
+  circle(mouseX, mouseY, 20)
+end
+```
 
-An `else`-`if` statement makes it possible to add more branches.
-`else`-`if` statements run different blocks of code under different
-conditions. For example, an `else`-`if` statement makes it easy to express
-the idea "If the mouse is on the left, paint the canvas white. If the mouse
-is in the middle, paint the canvas gray. Otherwise, paint the canvas
-black.":
+An `if`-`else` statement adds a block of code that runs if the `Boolean` expression is `false`. For example, here's an `if`-`else` statement that expresses the idea "Draw a circle if the mouse is pressed. Otherwise, display a message.":
 
-<pre><code class="language-js">if (mouseX < 33) {
-  background(255);
-} else if (mouseX < 67) {
-  background(200);
-} else {
-  background(0);
-}
-`</pre>
-`if` statements can add as many `else`-`if` statements as needed. However,
-there can only be one `else` statement and it must be last.
+```lua
+if mouseIsPressed == true then
+  -- When true.
+  circle(mouseX, mouseY, 20)
+else 
+  -- When false.
+  text('Click me!', 50, 50)
+end
+```
 
-`if` statements can also check for multiple conditions at once. For
-example, the `Boolean` operator `&&` (AND) checks whether two expressions
-are both `true`:
+There are two possible paths, or branches, in this code snippet. The program must follow one branch or the other.
 
-<pre><code class="language-js">if (keyIsPressed === true && key === 'p') {
-  text('You pressed the "p" key!', 50, 50);
-}
-`</pre>
-If the user is pressing a key AND that key is `'p'`, then a message will
-display.
+An `elseif` statement makes it possible to add more branches. `elseif` statements run different blocks of code under different conditions. For example, an `elseif` statement makes it easy to express the idea "If the mouse is on the left, paint the canvas white. If the mouse is in the middle, paint the canvas gray. Otherwise, paint the canvas black.":
 
-The `Boolean` operator `||` (OR) checks whether at least one of two
-expressions is `true`:
+```
+if mouseX < 33 then
+  background(255)
+elseif mouseX < 67 then
+  background(200)
+else
+  background(0)
+end
+```
 
-<pre><code class="language-js">if (keyIsPressed === true || mouseIsPressed === true) {
-  text('You did something!', 50, 50);
-}
-`</pre>
-If the user presses a key, or presses a mouse button, or both, then a
-message will display.
+`if` statements can add as many `elseif` statements as needed. However, there can only be one `else` statement and it must be last. Note that `elseif` requires a `then` after the statement being tested but `else` does not.
 
-The body of an `if` statement can contain another `if` statement. This is
-called a "nested `if` statement." For example, nested `if` statements make
-it easy to express the idea "If a key is pressed, then check if the key is
-`'r'`. If it is, then set the fill to red.":
+`if` statements can also check for multiple conditions at once. For example, the `Boolean` operator `and` checks whether two expressions are both `true`:
 
-<pre><code class="language-js">if (keyIsPressed === true) {
-  if (key === 'r') {
-    fill('red');
-  }
-}
-`</pre>
-See Boolean and Number
-to learn more about these data types and the operations they support.
+```lua
+if keyIsPressed == true and key == 'p' then
+  text('You pressed the "p" key!', 50, 50)
+end
+```
+
+If the user is pressing a key AND that key is `'p'`, then a message will display.
+
+The `Boolean` operator `or` checks whether at least one of two expressions is `true`:
+
+```lua
+if keyIsPressed == true or mouseIsPressed == true then
+  text('You did something!', 50, 50)
+end
+```
+
+If the user presses a key, or presses a mouse button, or both, then a message will display.
+
+The body of an `if` statement can contain another `if` statement. This is called a "nested `if` statement." For example, nested `if` statements make it easy to express the idea "If a key is pressed, then check if the key is `'r'`. If it is, then set the fill to red.":
+
+```
+if keyIsPressed == true then
+  if key == 'r' then
+    fill('red')
+  end
+end
+```
+
+See [Boolean](Boolean.md) and [Number](Number.md) to learn more about these data types and the operations they support.
 
 ## Examples
 
-![if example 1](assets/if1.webp)
+![if example 1](assets/if1.gif)
 
 ```lua
 -- Click the mouse to show the circle.
@@ -110,13 +98,88 @@ end
 function draw()
   background(200)
 
-  if (mouseIsPressed == true) 
+  if mouseIsPressed == true then
     circle(mouseX, mouseY, 20)
   end
 end
 ```
 
+![if example 2](assets/if2.gif)
+
+```lua
+-- Click the mouse to show different shapes.
+
+function setup()
+  size(100, 100)
+
+  describe(
+    'A white ellipse on a gray background. The ellipse becomes a circle when the user presses the mouse.'
+  )
+end
+
+function draw()
+  background(200)
+
+  if mouseIsPressed == true then 
+    circle(50, 50, 20)
+  else 
+    ellipse(50, 50, 20, 50)
+  end
+end
+```
+
+![if example 3](assets/if3.gif)
+
+```lua
+-- Move the mouse to change the background color.
+
+function setup()
+  size(100, 100)
+
+  describe(
+    'A square changes color from white to black as the user moves the mouse from left to right.'
+  )
+end
+
+function draw()
+  if mouseX < 33 then 
+    background(255)
+  elseif mouseX < 67 then
+    background(200)
+  else 
+    background(0)
+  end
+end
+```
+
+![if example 4](assets/if4.gif)
+
+```lua
+-- Click on the canvas to begin detecting key presses.
+
+function setup()
+  size(100, 100)
+
+  describe(
+    'A white circle drawn on a gray background. The circle changes color to red when the user presses the r key.'
+  )
+end
+
+function draw()
+  background(200)
+
+  if keyIsPressed == true then 
+    if key == 'r' then 
+      fill('red')
+    end
+  end
+
+  circle(50, 50, 40)
+end
+```
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [boolean](Boolean.md)
+* [for](for.md)
+* [function](function.md)

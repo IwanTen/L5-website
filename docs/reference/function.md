@@ -1,6 +1,4 @@
-# function()
-    
-**Note: This page was automatically ported from p5.js to L5 and hasn't yet been checked, fixed and updated. The code is likely incorrect, and the description or parameters might be wrong!**
+# function
 
 A named group of statements.
 
@@ -92,7 +90,7 @@ end
 function draw()
   background(200)
 
-  -- Call the drawLetter() function.
+  -- Call the drawChar() function.
   drawChar()
 end
 
@@ -109,7 +107,73 @@ function drawChar()
 end
 ```
 
+![function example 2](assets/function1.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  describe('A @ character on a gray background.')
+end
+
+function draw()
+  background(200)
+  fill(0)
+
+  -- Call the drawChar() function and pass values for
+  -- its position and size.
+  drawChar(50, 50, 20)
+end
+
+-- Declare a function that draws a @ character at the
+-- center of the canvas.
+function drawChar(x, y, size)
+  -- Style the text.
+  textAlign(CENTER, CENTER)
+
+  -- Use the size parameter.
+  textSize(size)
+
+  -- Draw a @ symbol.
+  -- Use the x and y parameters.
+  text('@', x, y)
+end
+```
+
+![function example 3](assets/function3.webp)
+
+```lua
+function setup()
+  size(100, 100)
+
+  describe('The message "Hello, world!" written on a gray background.')
+end
+
+function draw()
+  background(200)
+  fill(0)
+
+  -- Create a greeting.
+  local greeting = createGreeting('world')
+
+  -- Style the text.
+  textAlign(CENTER, CENTER)
+  textSize(16)
+
+  -- Display the greeting.
+  text(greeting, 50, 50)
+end
+
+-- Return a string with a personalized greeting.
+function createGreeting(name)
+  local message = "Hello, "..name.."!"
+  return message
+end
+```
+
 ## Related
 
-* [rect()](rect.md)
-* [ellipse()](ellipse.md)
+* [setup()](setup.md)
+* [draw()](draw.md)
+* [for](for.md)
+* [print()](print.md)
