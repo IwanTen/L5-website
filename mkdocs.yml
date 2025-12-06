@@ -26,6 +26,7 @@ nav:
     - Color: reference/#color
     - Typography: reference/#typography
     - Image: reference/#image
+    - Media: reference/#media
     - Transform: reference/#transform
     - Environment: reference/#environment
     - Rendering: reference/#rendering
@@ -37,6 +38,7 @@ nav:
     - Constants: reference/#constants
     - Foundation: reference/#foundation
   - Tutorials: tutorials/index.md
+  - Examples: examples/index.md
   - Bug Reports: bug-reports.md
   - Contributing: contributing.md
   - For developers: how.md

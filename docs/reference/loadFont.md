@@ -1,8 +1,8 @@
 # loadFont()
 
-Loads a font and creates a font object. `loadFont()` can load fonts in either .otf or .ttf format. Loaded fonts are used to style text in the window.
+Loads a font and creates a font object. `loadFont()` can load fonts in either Truetype (`.ttf`) or Bitmap Fonts. The filepath to the BMFont's image file must be specified inside the BMFont file. OpenType fonts (`.otf`) work as well but some features may not be supported. Loaded fonts are used to style text in the window. The default font without loading a custom font is `Noto Sans` size 13.
 
-The parameter `path` is the path to a font file. Paths to local files should be relative. For example, `'assets/inconsolata.otf'`. The Inconsolata font used in the following examples can be downloaded for free <a href="https://www.fontsquirrel.com/fonts/inconsolata/" target="_blank">here</a>. 
+The parameter `path` is the path to a font file. Paths to local files should be relative. For example, `'assets/inconsolata.otf'`. The Inconsolata font used in the following examples can be downloaded for free [here](https://www.fontsquirrel.com/fonts/inconsolata/).
 
 ## Examples
 

@@ -78,9 +78,7 @@
 * [image()](image.md)
 * [imageMode()](imageMode.md)
 * [loadImage()](loadImage.md)
-* [loadVideo()](loadVideo.md)
 * [noTint()](noTint.md)
-* [play()](play.md)
 * [tint()](tint.md)
 
 ### Pixels
@@ -93,6 +91,22 @@
 * [pixels](pixels.md)
 * [set()](set.md)
 * [updatePixels()](updatePixels.md)
+
+## Media
+
+### Video
+
+* [loadVideo()](loadVideo.md)
+* [:getWidth()](video-getWidth.md)
+* [:getHeight()](video-getHeight.md)
+* [:isPlaying()](video-isPlaying.md)
+* [:loop()](video-loop.md)
+* [:noLoop()](video-noLoop.md)
+* [:play()](video-play.md)
+* [:pause()](video-pause.md)
+* [:seek()](video-seek.md)
+* [:time()](video-time.md)
+* [:volume()](video-volume.md)
 
 ## Transform
 
