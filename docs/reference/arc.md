@@ -8,9 +8,6 @@ The fifth and sixth parameters, `start` and `stop`, set the angles between which
 
 The seventh parameter, mode, is optional. It determines the arc's fill style. The fill modes are a semi-circle (OPEN), a closed semi-circle (CHORD), or a closed pie segment (PIE).
 
-*Note: The fill mode of arc() does not render exactly the same as Processing and p5.js.*
-
-
 ## Examples
 
 ![arc example 1](assets/arc1.webp)
