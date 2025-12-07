@@ -15,7 +15,7 @@ To write code for L5 you need to install Love2d and the single L5.lua library fi
 
 **Latest version:** [Download L5.lua](https://raw.githubusercontent.com/L5lua/L5/main/L5.lua)
 
-**Stable release (v0.1.0):** [Download L5.lua v0.1.0](https://raw.githubusercontent.com/L5lua/L5/v0.1.0/L5.lua)
+**Stable release (v0.1.2):** [Download L5.lua v0.1.2](https://raw.githubusercontent.com/L5lua/L5/v0.1.2/L5.lua)
 
 ## Running your program
 
