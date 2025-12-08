@@ -17,6 +17,15 @@ To write code for L5 you need to install Love2d and the single L5.lua library fi
 
 **Stable release (v0.1.2):** [Download L5.lua v0.1.2](https://raw.githubusercontent.com/L5lua/L5/v0.1.2/L5.lua)
 
+## Offline Documentation
+
+This L5 documentation site is available for download to run offline, with or without images.
+
+* [Download L5lua.org with images (8MB ZIP)](https://github.com/L5lua/L5-website/archive/refs/heads/gh-pages.zip)
+* [Download L5lua.org without images (2MB ZIP)](https://github.com/L5lua/L5-website/archive/refs/heads/gh-pages-lite.zip)
+
+After downloading, extract the ZIP and open `index.html` in your browser, or serve the folder with any web server.
+
 ## Running your program
 
 In general, the easiest way to run your program is to save your `main.lua` file inside a folder, then drag that entire folder onto your Love2d application folder to launch it. Don't forget to put `require('L5')` at the top of the file.
