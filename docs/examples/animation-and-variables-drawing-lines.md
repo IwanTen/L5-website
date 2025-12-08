@@ -43,7 +43,7 @@ end
 ## Related Examples
 
 * [Animation with Events](animation-and-variables-animation-with-events.md)
-* [Conditions](animaion-and-variables-conditions.md)
+* [Conditions](animation-and-variables-conditions.md)
 
 Drawing Lines: Revised by [Darren Kessner](https://github.com/dkessner). Edited and maintained by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people). Adapted to L5 2025. Licensed under CC BY-NC-SA 4.0.
 

@@ -1,6 +1,6 @@
 # Video Player
 
-Using the [loadVideo()](/reference/loadVideo.md) functions, you can upload a video and play it within the window using [image()](/reference/image.md).
+Using the [loadVideo()](/reference/loadVideo) functions, you can upload a video and play it within the window using [image()](/reference/image).
 
 ![Clicking on button begins video playback, and second click pauses. Video shows fingers walking on page.](/assets/examples/imported-media-video.gif)
 

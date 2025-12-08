@@ -29,7 +29,7 @@ function setup()
 end
 ```
 
-![max example 2](assets/max2.webp)
+![max example 2](assets/max1.webp)
 
 ```lua
 function setup()

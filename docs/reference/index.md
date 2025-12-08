@@ -105,6 +105,7 @@
 * [:play()](video-play.md)
 * [:pause()](video-pause.md)
 * [:seek()](video-seek.md)
+* [:stop()](video-stop.md)
 * [:time()](video-time.md)
 * [:volume()](video-volume.md)
 
@@ -134,11 +135,12 @@
 * [print()](print.md)
 * [width](width.md)
 * [windowResized()](windowResized.md)
+* [windowTitle()](windowTitle.md)
 
 ## Rendering
 
 * <s>[blendMode()](#)</s>
-* [size()](size.md) - Creates a window of specified dimensions
+* [size()](size.md)
 * [createGraphics()](createGraphics.md)
 * <s>[noCanvas()](#)</s>
 * [resizeWindow()](resizeWindow.md)

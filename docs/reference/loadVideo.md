@@ -35,8 +35,9 @@ loadVideo(file)
 
 ## Related
 
-* [play()](play.md)
-
+* [pause()](video-pause.md)
+* [play()](video-play.md)
+* [stop()](video-stop.md)
 
 ---
 

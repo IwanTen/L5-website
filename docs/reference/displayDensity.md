@@ -37,7 +37,7 @@ Number: current pixel density of the display
 ## Related
 
 * [size()](size.md)
-* [fullsize()](fullsize.md)
+* [fullscreen()](fullscreen.md)
 * [pixels](pixels.md)
 
 

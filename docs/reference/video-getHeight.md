@@ -41,7 +41,7 @@ Number: height of video file
 
 * [loadVideo()](loadVideo.md)
 * [image()](image.md)
-* [:getWidth()](video-width.md)
+* [:getWidth()](video-getWidth.md)
 * [:loop()](video-loop.md)
 * [:pause()](video-pause.md)
 * [:seek()](video-seek.md)

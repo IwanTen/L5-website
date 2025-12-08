@@ -2,7 +2,7 @@
 
 A way to repeat a block of code.
 
-`while` loops are helpful for repeating statements while a condition is `true`. They're like `if` statements that repeat. For example, a `while` loop makes it easy to express the idea "draw several lines" like so:
+`while` loops are helpful for repeating statements while a condition is `true`. They're like *[if](if.md)* statements that repeat. For example, a `while` loop makes it easy to express the idea "draw several lines" like so:
 
 ```lua
 -- Declare a variable to keep track of iteration
@@ -67,13 +67,14 @@ function draw()
   local x = 10
 
   -- Repeat as long as x < 100
-  while (x < 100) 
+  while x < 100 do
     line(x, 25, x, 75)
 
     -- Increment by 20.
-    x += 20
+    x = x + 20
   end
 end
+
 ```
 
 ## Related
@@ -81,7 +82,6 @@ end
 * [for](for.md)
 * [function](function.md)
 * [if](if.md)
-
 
 ---
 

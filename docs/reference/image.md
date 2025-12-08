@@ -76,7 +76,7 @@ image(img, x, y, [width], [height])
 ## Related
 
 * [loadImage()](loadImage.md)
-* [font()](font.md)
+* [loadFont()](loadFont.md)
 
 
 ---

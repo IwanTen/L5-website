@@ -77,10 +77,8 @@ line(x1, y1, x2, y2)
 ## Related
 
 * [strokeWeight()](strokeWeight.md)
-* [strokeJoin()](strokejoin.md)
-* [strokeCap()](strokecap.md)
+* [strokeJoin()](strokeJoin.md)
 * [beginShape()](beginShape.md)
-
 
 ---
 

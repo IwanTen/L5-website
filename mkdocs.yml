@@ -1,5 +1,11 @@
 site_name: "L5: A Processing Library in Lua"
 site_url: https://l5lua.org
+validation:
+  absolute_links: ignore
+  nav:
+    omitted_files: ignore
+    not_found: ignore
+    absolute_links: ignore
 theme:
   name: material
   palette:
