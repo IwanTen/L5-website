@@ -1,8 +1,10 @@
 # :volume()
 
-Changes video playback volume `0` to `1`, or reports current video volume without specified argument.
+Sets the video volume.
 
-`0` is silent. `1` is maximum volume level.
+Using the `:volume()` method on a video without an argument returns the current volume as a number in the range 0 (off) to 1 (maximum). 
+
+The parameter, `vol`, is optional. It's a number that sets the volume from 0 (off) to 1 (maximum). For example, calling `video:volume(0.5)` sets the volume to half of its maximum.
 
 **Note: Currently L5 can only play ogv (Ogg Theora) video files. Use an external program such as [Handbrake](https://handbrake.fr) or ffmpeg (command line) to convert mp4, avi, mkv, and mov codecs first.**
 
@@ -47,7 +49,7 @@ videofile:volume()
 
 | Parameter |                                                                     |
 | -         | --                                                                  |
-| volume    | Number: number between 0 and 1 to specify total volume of video.    |
+| vol       | Number: number between 0 and 1 to specify total volume of video.    |
 
 
 ## Returns
@@ -63,3 +65,8 @@ Number: Total seconds since start of playback.
 * [:play()](video-play.md)
 * [:seek()](video-seek.md)
 * [:time()](video-time.md)
+
+
+---
+
+*This reference page contains content adapted from [p5.js](https://p5js.org/) and [Processing](https://processing.org) by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people), licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).*'

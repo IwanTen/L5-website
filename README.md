@@ -65,6 +65,6 @@ git push origin main
 
 This website and its original content are licensed under the [MIT License](LICENSE).
 
-**Exception:** The Reference and Examples pages contain content adapted from [Processing](https://processing.org) and [p5.js](https://p5js.org/) by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people), which is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). 
+**Exception:** The Reference and Examples pages contain content adapted from [p5.js](https://p5js.org/) and [Processing](https://processing.org) by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people), licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). 
 
 Love2d installation instructions have been adapted from the Love2d wiki: Getting Started, GNU Free Documentation License 1.3.
