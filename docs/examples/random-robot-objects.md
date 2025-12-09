@@ -148,4 +148,5 @@ box = {
 ## Related Examples
 
 * [10print variations](10print.md) - An implementation of the classic maze-drawing algorithm
+* [Conway's Game Of Life](conways-life.md) - An implementation of the zero-player game and simulation formulated by mathematician John Conway
 * [Daily Rituals](daily-rituals.md) - One a day daily ritual generator

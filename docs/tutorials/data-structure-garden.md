@@ -786,7 +786,7 @@ end
 
 Your code should look similar to this:
 
-![Data Garden 11](/assets/data-garden11.gif)
+![Data Garden 11](/assets/tutorials/data-garden11.gif)
 
 ```lua
 require("L5")
