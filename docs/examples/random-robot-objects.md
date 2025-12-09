@@ -1,6 +1,6 @@
 # Random Robot Objects
 
-This object-oriented programming example program demonstrates two different Lua patterns - classes with metatables (Robot) and simple tables with methods (box). It consists of a Robot class definition and simple box object. 
+This object-oriented programming example demonstrates two different Lua patterns - classes with metatables (Robot) and simple tables with methods (box). It consists of a Robot class definition and simple box object. 
 
 The box object demonstrates a simpler object-oriented structure of a table with methods. Lua's power of [first-class functions](https://softwarepatternslexicon.com/lua/lua-programming-fundamentals/first-class-functions-and-closures/) is represented here.
 
@@ -63,6 +63,8 @@ function setup()
   for i = 1, 10 do
     table.insert(robots, Robot:new())
   end
+  
+  describe('Random robots moving around the screen. They steal the yellow box when they overlap with it.")
 end
 
 function draw()
@@ -143,3 +145,7 @@ box = {
 * [table](/reference/table) 
 * [random()](/reference/random)
 
+## Related Examples
+
+* [10print variations](10print.md) - An implementation of the classic maze-drawing algorithm
+* [Daily Rituals](daily-rituals.md) - One a day daily ritual generator

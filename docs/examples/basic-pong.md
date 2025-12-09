@@ -59,6 +59,8 @@ function setup()
   }
   
   noCursor()
+  
+  description("A game of Pong between a human and computer AI player.")
 end
 
 function draw()
@@ -141,9 +143,17 @@ end
 
 ## Related References
 
-* [table](/table.md) - changing color modes
+* [if](/reference/if) 
+* [height](/reference/height)
+* [noCursor](/reference/noCursor)
+* [random()](/reference/random)
+* [table](/reference/table) 
+* [text()](/reference/text)
+* [width](/reference/width)
 
 ## Related Examples
 
-* [Drawing software](/examples/drawing-software)
+* [10Print](10print.md) - An implementation of the classic maze-drawing algorithm
+* [Animation with Events](animation-and-variables-animation-with-events.md) - Pause and resume animation.
+* [Conditions](animation-and-variables-conditions.md) - Use if and else statements to make decisions while your sketch runs.
 

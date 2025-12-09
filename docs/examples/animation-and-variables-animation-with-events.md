@@ -66,7 +66,10 @@ end
 
 ## Related Examples
 
-* [Drawing Lines](animation-and-variables-drawing-lines.md)
-* [Conditions](animation-and-variables-conditions.md)
+* [Basic Pong](basic-pong.md) - A simple program demonstrating a basic implementation of pong with enemy AI player
+* [Drawing Lines](animation-and-variables-drawing-lines.md) - A drawing program demonstrating HSB colorMode
+* [Conditions](animation-and-variables-conditions.md) - Use if and else statements to make decisions while your sketch runs.
+
+---
 
 Animation with Events: Revised by [Darren Kessner](https://github.com/dkessner). Edited and maintained by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people). Adapted to L5 2025. Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). 

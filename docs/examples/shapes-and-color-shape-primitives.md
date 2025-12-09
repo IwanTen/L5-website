@@ -70,6 +70,8 @@ end
 
 ## Related Examples
 
-* [Color](shapes-and-color-color.md)
+* [Color](shapes-and-color-color.md) - Add color to your sketch.
+
+---
 
 Shape primitives: Revised in 2023 by [Darren Kessner](https://github.com/dkessner). Created by [Caleb Foss](https://github.com/calebfoss), [Darren Kessner](https://github.com/dkessner). From 2024 onwards, edited and maintained by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people). Adapted to L5 2025.. Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).

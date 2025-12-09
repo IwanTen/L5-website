@@ -42,11 +42,22 @@ function draw()
   image(img, offset, 0)
 end
 ```
+
+## Related References
+
+* [loadImage()](/reference/loadImage)
+* [function()](/reference/function)
+* [image()](/reference/image)
+* [local](/reference/local)
+* [tint()](/reference/tint)
+
 ## Related Examples
 
 * [Words](imported-media-words.md) - Load fonts and draw text.
 * [Copy Image Data](imported-media-copy-image-data.md) - Paint from an image file onto the canvas.
 * [Image Transparency](imported-media-image-transparency.md) - Make an image translucent on the canvas.
 * [Video Player](imported-media-video.md) - Create a player for video playback and stylize in the window
+
+---
 
 Image Transparency: Revised by [Kasey Lichtlyter](https://www.klich.co/). Edited and maintained by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people). Adapted to L5 2025. Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Photo by Buzz Aldrin courtesy NASA. 

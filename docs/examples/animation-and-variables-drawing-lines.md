@@ -42,9 +42,11 @@ end
 
 ## Related Examples
 
-* [Doodle Draw](doodle-draw.md)
-* [Animation with Events](animation-and-variables-animation-with-events.md)
-* [Conditions](animation-and-variables-conditions.md)
+* [Doodle Draw](doodle-draw.md) - A basic drawing program tracking mouse movements
+* [Animation with Events](animation-and-variables-animation-with-events.md) - Pause and resume animation.
+* [Conditions](animation-and-variables-conditions.md) - Use if and else statements to make decisions while your sketch runs.
+
+---
 
 Drawing Lines: Revised by [Darren Kessner](https://github.com/dkessner). Edited and maintained by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people). Adapted to L5 2025. Licensed under CC BY-NC-SA 4.0.
 

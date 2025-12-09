@@ -62,8 +62,12 @@ function drawWords(x)
 end
 ```
 
-Words: Revised by [Kasey Lichtlyter](https://www.klich.co/). Edited and maintained by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people). Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+## Related References
 
+* [loadFont()](/reference/loadFont)
+* [text()](/reference/text)
+* [textAlign()](/reference/textAlign)
+* [textSize()](/reference/textSize)
 
 ## Related Examples
 
@@ -71,4 +75,9 @@ Words: Revised by [Kasey Lichtlyter](https://www.klich.co/). Edited and maintain
 * [Copy Image Data](imported-media-copy-image-data.md) - Paint from an image file onto the canvas.
 * [Image Transparency](imported-media-image-transparency.md) - Make an image translucent on the canvas.
 * [Video Player](imported-media-video.md) - Create a player for video playback and stylize in the window
+
+---
+
+Words: Revised by [Kasey Lichtlyter](https://www.klich.co/). Edited and maintained by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people). Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
 

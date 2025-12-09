@@ -1,4 +1,4 @@
-# Drawing Software
+# Doodle Draw
 
 This is a basic implementation of a program to draw doodles, using random colors.
 
@@ -32,6 +32,8 @@ function setup()
 
   background("midnightblue")
   strokeWeight(5)
+  
+  describe("A drawing program in a midnight blue window producing random colors each time you draw.")
 end
 
 function mouseDragged()
@@ -55,5 +57,7 @@ end
 
 ## Related Examples
 
-* [Basic Pong](/examples/basic-pong)
+* [10print vartiations](10print.md) - An implementation of the classic maze-drawing algorithm
+* [Basic Pong](basic-pong.md) - A simple program demonstrating a basic implementation of pong with enemy AI player
+* [Copy Image Data](imported-media-copy-image-data.md) - Paint from an image file onto the canvas.
 

@@ -4,7 +4,7 @@ If and else statements allow a [block of code](https://www.lua.org/pil/4.2.html)
 
 Comparison operators help to form conditions by comparing two values. In this example, the hue of the circle resets to zero when the hue is at least 360 because of the if statement on line 69. You can read more about [relational operators](https://www.lua.org/manual/5.2/manual.html#3.4.3) in the Programming in Lua book.
 
-Logical operators allow conditions to be combined. [and](https://www.lua.org/manual/5.2/manual.html#3.4.4) checks that both conditions are true. The circle in this example has a black fill when it is toward the horizontal center of the canvas, and it has a white fill when it is not. This is because of the if statement on line 45, which checks that the circle’s x position is at least 100 and also no more than 300. [or](https://www.lua.org/manual/5.2/manual.html#3.4.4) checks that at least one of the conditions is true. The circle reverses horizontal speed when it reaches the left or right edge of the canvas because of the if statement on line 75.
+Logical operators allow conditions to be combined. [and](https://www.lua.org/manual/5.2/manual.html#3.4.4) checks that both conditions are true. The circle in this example has a black fill when it is toward the horizontal center of the canvas, and it has a white fill when it is not. This is because of the if statement on line 52, which checks that the circle’s x position is at least 100 and also no more than 300. [or](https://www.lua.org/manual/5.2/manual.html#3.4.4) checks that at least one of the conditions is true. The circle reverses horizontal speed when it reaches the left or right edge of the canvas because of the if statement beginning on line 82.
 
 ![A square screen with a white stripe center and a black circle overlapping a colored circle that changes position and background color when the mouse is held down.](/assets/examples/conditions.gif)
 
@@ -111,7 +111,10 @@ end
 
 ## Related Examples
 
-* [Drawing Lines](animation-and-variables-drawing-lines.md)
-* [Animaton with Events](animation-and-variables-animation-with-events.md)
+* [Basic Pong](basic-pong.md) - A simple program demonstrating a basic implementation of pong with enemy AI player
+* [Drawing Lines](animation-and-variables-drawing-lines.md) - A drawing program demonstrating HSB colorMode
+* [Animaton with Events](animation-and-variables-animation-with-events.md) - Pause and resume animation.
+
+---
 
 Conditions: Inspired by [the Conditional Shapes Example by Prof. WM Harris](https://archive.p5js.org/examples/control-conditional-shapes.html). Revised by [Caleb Foss](https://github.com/calebfoss). From 2024 onwards, edited and maintained by [p5.js Contributors](https://github.com/processing/p5.js?tab=readme-ov-file#contributors) and [Processing Foundation](https://processingfoundation.org/people). Adapted to L5 2025. Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). 

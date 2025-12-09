@@ -12,14 +12,16 @@
 * [Animation with Events](animation-and-variables-animation-with-events.md) - Pause and resume animation.
 * [Conditions](animation-and-variables-conditions.md) - Use if and else statements to make decisions while your sketch runs.
 * [Basic Pong](basic-pong.md) - A simple program demonstrating a basic implementation of pong with enemy AI player
+* [10Print](10print.md) - An implementation of the classic maze-drawing algorithm
 
 ## Imported Media
 
+* [Daily Rituals](daily-rituals.md) - One a day daily ritual generator
 * [Words](imported-media-words.md) - Load fonts and draw text.
 * [Copy Image Data](imported-media-copy-image-data.md) - Paint from an image file onto the canvas.
 * [Image Transparency](imported-media-image-transparency.md) - Make an image translucent on the canvas.
 * [Video Player](imported-media-video.md) - Create a player for video playback and stylize in the window
 
-## Object-Orientation Patterns
+## Object-Orientation 
 
 * [Random Robot Objects](random-robot-objects.md) - Demonstrates two different Lua patterns - classes with metatables and simple table objects
