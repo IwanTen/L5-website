@@ -7,7 +7,7 @@ Visit the site at [L5lua.org](https://l5lua.org).
 ## TODO
 
 * [X] Finish editing all reference pages and adding screenshots
-* [ ] Add tutorial and example pages
+* [X] Add tutorial and example pages
 * [ ] Add information on contributions and being listed as a contributor
 
 ## How to Contribute
