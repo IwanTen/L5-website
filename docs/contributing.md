@@ -1,6 +1,6 @@
 Contributions to L5 are welcomed. Consider opening an [issue](https://github.com/L5lua/L5/issues) to discuss proposed changes. [Contributions to this website](https://github.com/L5lua/L5-website) are also welcomed. 
 
-We welcome all contributions including suggestions, [issues](https://github.com/L5lua/L5/issues), pull requests, [tutorials](https://github.com/L5lua/L5-website/issues/1) and improvements to documentation.
+We welcome all contributions including suggestions, [issues](https://github.com/L5lua/L5/issues) (bug reports), pull requests, [tutorials](https://github.com/L5lua/L5-website/issues/1) and improvements to documentation.
 
 We are inspired by the *[all contributors](https://github.com/all-contributors/all-contributors.github.io)* approach to contribution to open source projects:
 
@@ -8,7 +8,7 @@ We are inspired by the *[all contributors](https://github.com/all-contributors/a
 
 ## Some ways to Help with L5
 
-- **File bug reports** with detailed reproduction steps
+- **File bug reports** with detailed reproduction steps by [creating an issue](https://github.com/L5lua/L5/issues)
 - **Fix code issues** and improve functionality
 - **Create or improve documentation** and [tutorials](https://github.com/L5lua/L5-website/issues/1)
 - **Build example programs** showcasing L5 capabilities
