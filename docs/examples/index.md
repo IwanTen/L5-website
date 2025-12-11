@@ -12,6 +12,7 @@
 * [Animation with Events](animation-and-variables-animation-with-events.md) - Pause and resume animation.
 * [Conditions](animation-and-variables-conditions.md) - Use if and else statements to make decisions while your sketch runs.
 * [Basic Pong](basic-pong.md) - A simple program demonstrating a basic implementation of pong with enemy AI player
+* [Walking Lines](walking-lines.md) - Animated intersecting lines
 * [10Print](10print.md) - An implementation of the classic maze-drawing algorithm
 * [Conway's Game Of Life](conways-life.md) - An implementation of the zero-player game and simulation formulated by mathematician John Conway
 
