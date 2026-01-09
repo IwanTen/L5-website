@@ -16,3 +16,7 @@ We are inspired by the *[all contributors](https://github.com/all-contributors/a
 - **Test on different systems** and report compatibility
 - **Create educational content** like zines or video tutorials
 - **Develop add-on libraries** or document Lua ecosystem integration
+
+## Winter 2026 L5 Survey
+
+[The Winter 2026 L5 Survey is currently live](survey.md)

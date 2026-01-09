@@ -66,12 +66,7 @@ Where Java undergoes regular major updates and JavaScript is a fast-evolving and
 
 ## Getting Started
 
-1. **Install Love2D** from [love2d.org](https://www.love2d.org/)
-2. [Download L5](https://raw.githubusercontent.com/L5lua/L5/main/L5.lua) 
-3. **Create or edit main.lua** in the same directory as L5.lua
-4. **Require L5** at the top of your main.lua file with `require ("L5")`
-5. **Write** your program code in main.lua
-6. **Run** your program by dragging the directory holding your main.lua sketch onto Love2D icon or running `love .` in terminal from its root.
+Ready to try L5? Check out the [download](download.md) page for an installation guide and the [tutorials](tutorials/index.md) for easy ways to get started.
 
 ## Community and Support
 

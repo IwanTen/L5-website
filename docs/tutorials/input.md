@@ -321,7 +321,7 @@ Here are some ideas:
 * Create a game where you move a character with the mouse
 * Make a program that changes background color based on mouse position
 * Create a "catch the circle" game where clicking a moving target gives you points
-* Create a program where the user controls a ball that bounces around the screen. Add acceleration, gravity, and braking. Instead of a circle, make it a spaceship (like from the game [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game))) [where](where) you control the direction and acceleration.
+* Create a program where the user controls a ball that bounces around the screen. Add acceleration, gravity, and braking. Instead of a circle, make it a spaceship (like from the game [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game))) where you control the direction and acceleration.
 
 **Next tutorial**: [For Loops](for-loops.md)
 
