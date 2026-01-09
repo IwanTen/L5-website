@@ -6,12 +6,20 @@ To write code for L5 you need to install Love2d and the single L5.lua library fi
 
 ## Install
 
-1. Download and install [Love2d](https://www.love2d.org/) with the free and simple installer
-2. Download L5.lua
-3. Make a new folder for your project. Inside it create a `main.lua` file to write your code in. Be sure to include `require ("L5")` in the top of your program. 
-4. Add a copy of L5.lua to your folder. 
+1. Download and install [Love2d](https://www.love2d.org/) with the free installer
+2. Download the L5 starter project and extract it (double-click on Mac, right-click "Extract All..." on Windows)
+3. Open main.lua in any text editor and begin coding!
+4. Drag the L5-starter folder onto the Love2d application to run your program, or run from an IDE or command line for access to console messages
 
 ## Downloads
+
+### L5 Starter Project (Recommended)
+
+This compressed folder contains the *L5.lua* library, a starter *main.lua* file (with `require('L5')` already included), and a *README*.
+
+[Download L5 Starter project](L5-starter.zip)
+
+### Individual Downloads
 
 **Latest version:** [Download L5.lua](https://raw.githubusercontent.com/L5lua/L5/main/L5.lua)
 
@@ -28,7 +36,7 @@ After downloading, extract the ZIP and open `index.html` in your browser, or ser
 
 ## Running your program
 
-In general, the easiest way to run your program is to save your `main.lua` file inside a folder, then drag that entire folder onto your Love2d application folder to launch it. Don't forget to put `require('L5')` at the top of the file.
+The easiest way to run your L5 program is to drag the folder containing your main.lua onto the Love2d application. But to see error messages and printing in the console you will want to run from an IDE or command line. Here are platform-specific details:
 
 ### Linux
 
