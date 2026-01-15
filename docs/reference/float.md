@@ -87,7 +87,7 @@ float(table)
 
 ## Related
 
-* [boolean()](boolean.md)
+* [boolean()](boolean-function.md)
 * [str()](str.md)
 * [byte()](byte.md)
 * [char()](char.md)

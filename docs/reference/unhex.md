@@ -94,7 +94,7 @@ Number: converted number.
 ## Related
 
 * [hex()](hex.md)
-* [boolean()](boolean.md)
+* [boolean()](boolean-function.md)
 * [byte()](byte.md)
 * [char()](char.md)
 * [unchar()](unchar.md)

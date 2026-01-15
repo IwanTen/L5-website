@@ -118,7 +118,7 @@ String: converted single-character string.
 
 ## Related
 
-* [boolean()](boolean.md)
+* [boolean()](boolean-function.md)
 * [byte()](byte.md)
 * [float()](float.md)
 * [str()](str.md)

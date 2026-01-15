@@ -249,7 +249,7 @@
 
 ### Conversion
 
-* [boolean()](boolean.md)
+* [boolean()](boolean-function.md)
 * [byte()](byte.md)
 * [char()](char.md)
 * [float()](float.md)
@@ -272,13 +272,13 @@
 
 ## Constants
 
-* [DEGREES](DEGREES.md)
+* [DEGREES](degrees-constant.md)
 * [HALF_PI](HALF_PI.md)
 * [HSB](HSB.md)
 * [HSL](HSL.md)
 * [PI](PI.md)
 * [QUARTER_PI](QUARTER_PI.md)
-* [RADIANS](RADIANS.md)
+* [RADIANS](radians-constant.md)
 * [TAU](TAU.md)
 * [TWO_PI](TWO_PI.md)
 * [VERSION](VERSION.md)

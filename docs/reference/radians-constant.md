@@ -1,16 +1,16 @@
-## RADIANS
+# RADIANS
 
 A string constant that's used to set the [angleMode()](angleMode.md).
 
 By default, functions such as [rotate()](rotate.md) and [sin()](sin.md) expect angles measured in units of radians.
 
-Calling `angleMode(RADIANS)` ensures that angles are measured in units of radians. Doing so can be useful if the [angleMode()](angleMode.md) has been set to [DEGREES](DEGREES.md).
+Calling `angleMode(RADIANS)` ensures that angles are measured in units of radians. Doing so can be useful if the [angleMode()](angleMode.md) has been set to [DEGREES](degrees-constant.md).
 
 *Note: `TWO_PI` radians equals 360˚.*
 
 ## Examples
 
-![RADIANS example 1](assets/DEGREES1.webp)
+![RADIANS example 1](assets/degrees-constant1.webp)
 
 ```lua
 function setup()
@@ -39,7 +39,7 @@ end
 ## Related
 
 * [angleMode()](angleMode.md)
-* [DEGREES](DEGREES.md)
+* [DEGREES](degrees-constant.md)
 * [ellipseMode()](ellipseMode.md)
 * [ellipse()](ellipse.md)
 * [radians()](radians.md)

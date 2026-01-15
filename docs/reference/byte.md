@@ -144,7 +144,7 @@ Number: converted byte value.
 
 ## Related
 
-* [boolean()](boolean.md)
+* [boolean()](boolean-function.md)
 * [char()](char.md)
 * [float()](float.md)
 * [str()](str.md)

@@ -114,7 +114,7 @@ String: converted string.
 
 ## Related
 
-* [boolean()](boolean.md)
+* [boolean()](boolean-function.md)
 * [byte()](byte.md)
 * [char()](char.md)
 * [float()](float.md)

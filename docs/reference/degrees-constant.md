@@ -1,4 +1,4 @@
-## DEGREES
+# DEGREES
 
 A string constant that's used to set the [angleMode()](angleMode.md).
 
@@ -8,7 +8,7 @@ By default, functions such as [rotate()](rotate.md) and [sin()](sin.md) expect a
 
 ## Examples
 
-![DEGREES example 1](assets/DEGREES1.webp)
+![DEGREES example 1](assets/degrees-constant1.webp)
 
 ```lua
 function setup()
@@ -37,7 +37,7 @@ end
 * [degrees()](degrees.md)
 * [ellipseMode()](ellipseMode.md)
 * [ellipse()](ellipse.md)
-* [RADIANS](RADIANS.md)
+* [RADIANS](radians-constant.md)
 
 
 ---

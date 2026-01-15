@@ -84,11 +84,11 @@ end
 ## Related
 
 * [angleMode()](angleMode.md)
-* [DEGREES](DEGREES.md)
+* [DEGREES](degrees-constant.md)
 * [TWO_PI](TWO_PI.md)
 * [PI](PI.md)
 * [QUARTER_PI](QUARTER_PI.md)
-* [RADIANS](RADIANS.md)
+* [RADIANS](radians-constant.md)
 
 
 ---
