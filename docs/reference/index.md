@@ -1,3 +1,5 @@
+An offline version of this documentation is available for [download](https://l5lua.org/download/#offline-documentation).
+
 ## Shape
 
 ### 2D Primitives
