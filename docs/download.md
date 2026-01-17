@@ -110,7 +110,7 @@ Otherwise, the easiest way to run your program is to drag the folder onto either
 You can also launch the game from the command line:
 
 ```
-"C:\Program Files\LOVE\love.exe" "C:\games\mygame"
+"C:\Program Files\LOVE\love.exe" "C:\path\to\my-program"
 ```
 
 You can create a shortcut to do this; simply make a shortcut to love.exe, right-click on it and select "Properties", and then put the command line you want in the "Target" box for the shortcut.
